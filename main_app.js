@@ -5,6 +5,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
   .state('login', {
       templateUrl: 'views/login.html',
       url: '/login',
+	  controller:'LoginCtrl'
       //resolve: {
         //loggedout: checkLoggedin
       //}
@@ -16,7 +17,20 @@ app.config(function($stateProvider, $urlRouterProvider) {
       //loggedout: checkLoggedout
     //}
   })
-
+ .state('companylist', {
+    templateUrl: 'views/companylist.html',
+    url: '/companylist',
+    //resolve: {
+      //loggedout: checkLoggedout
+    //}
+  })
+  .state('newemployee', {
+    templateUrl: 'views/newemployee.html',
+    url: '/newemployee',
+    //resolve: {
+      //loggedout: checkLoggedout
+    //}
+  })
   function checkLoggedout($q, $timeout, $rootScope, $state, $localStorage) {
     var deferred = $q.defer();
     accessToken = localStorage.getItem('accessToken')
