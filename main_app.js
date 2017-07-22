@@ -31,9 +31,9 @@ app.config(function($stateProvider, $urlRouterProvider) {
       //loggedout: checkLoggedout
     //}
   })
-  .state('userlist',{
+  .state('user-list',{
 	  templateUrl:'views/userlist.html',
-	  url:'/userlist',
+	  url:'/user-list',
 	  //resolve:{
 		  //loggedout:checkLoggedout
 	  //}
