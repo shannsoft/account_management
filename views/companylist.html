@@ -12,11 +12,11 @@
  <body>
  <div class="content" style="height:auto; margin:10px;">
 	<div style="height:50px; margin:10px;">
-		 <li  ng-class="{'active':stateName == 'newemployee'}">
+		 <li  ng-class="{'active':stateName == 'newemployee'}" style=" list-style:none;">
         <a href="" ui-sref="newemployee">
          
-        <button type="button" class="btn btn-primary btn-block active" style="display: block; width: 25%; padding: 10px 20px;font-size: 20px; float:right;">
-		<i class="fa fa-plus" style="float:left; padding-right:14px; margin-top:4px;"></i>Add A New Company</button>
+        <button type="button" class="btn btn-primary btn-block active" style="display: block; width: 17%; padding: 10px 20px;font-size: 12px; float:right;">
+		<i class="fa fa-plus" style="float:left; padding-right:7px; margin-top:2px;"></i>Add A New Company</button>
 		</a>
 		</li>
 	</div>
@@ -25,13 +25,8 @@
 	<div class="row" style="height:auto;">
       <div class="box box-info">
         <div class="box-header with-border">
-          <h3 class="box-title">The Companies Enrolled</h3>
+          <h3 class="box-title">The Companies Enrolled </h3>
 
-          <div class="box-tools pull-right">
-            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-            </button>
-            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-          </div>
         </div>
         <!-- /.box-header -->
         <div class="box-body">
@@ -39,77 +34,133 @@
             <table class="table no-margin">
               <thead>
               <tr>
-                <th>Order ID</th>
-                <th>Item</th>
-                <th>Status</th>
-                <th>Popularity</th>
+                <th>Firm Nmae</th>
+                <th>Firm-type</th>
+                <th>Date of Incorporation</th>
+				  <th>Status</th>
+                <th>GST No</th>
+				<th>Options</th>
               </tr>
               </thead>
               <tbody>
               <tr>
-                <td><a href="pages/examples/invoice.html">OR9842</a></td>
-                <td>Call of Duty IV</td>
-                <td><span class="label label-success">Shipped</span></td>
+                <td><a href="pages/examples/invoice.html">Firm1</a></td>
+                <td>Chatard Accountants</td>
+                <td><span><b>20-07-17</b></span></td>
+				<td><span class="label label-success"><b>Active</b></span></td>
                 <td>
-                  <div class="sparkbar" data-color="#00a65a" data-height="20">90,80,90,-70,61,-83,63   <a href="">viewMore details</a></div>
-				 
-                </td>
+                  <div class="sparkbar" data-color="#00a65a" data-height="20">51544</div> </td>
+				  <td> <div class="box-tools pull-right">
+				  <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-pencil-square-o"></i>
+            </button>
+            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-trash"></i>
+            </button>
+            <a href class="option-btn"><span class="label label-danger">deactivate</span></a>
+          </div></td>
               </tr>
               <tr>
-                <td><a href="pages/examples/invoice.html">OR1848</a></td>
-                <td>Samsung Smart TV</td>
-                <td><span class="label label-warning">Pending</span></td>
+                <td><a href="pages/examples/invoice.html">Firm2</a></td>
+                <td>Chatard Accountants</td>
+                <td><span><b>20-07-17</b></span></td>
+				<td><span class="label label-danger"><b>In-active</b></span></td>
                 <td>
-                  <div class="sparkbar" data-color="#f39c12" data-height="20">90,80,-90,70,61,-83,68</div>
+                  <div class="sparkbar" data-color="#f39c12" data-height="20">12525</div>
                 </td>
+				 <td> <div class="box-tools pull-right">
+				  <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-pencil-square-o"></i>
+            </button>
+            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-trash"></i>
+            </button>
+             <a href class="option-btn"><span class="label label-danger">deactivate</span></a>
+          </div></td>
               </tr>
               <tr>
-                <td><a href="pages/examples/invoice.html">OR7429</a></td>
-                <td>iPhone 6 Plus</td>
-                <td><span class="label label-danger">Delivered</span></td>
+                <td><a href="pages/examples/invoice.html">Firm3</a></td>
+                <td>Chatard Accountants</td>
+                <td><span><b>20-07-17</b></span></td>
+				 <td><span class="label label-success"><b>Active</b></span></td>
                 <td>
-                  <div class="sparkbar" data-color="#f56954" data-height="20">90,-80,90,70,-61,83,63</div>
+                  <div class="sparkbar" data-color="#f56954" data-height="20">21544</div>
                 </td>
+				 <td> <div class="box-tools pull-right">
+				  <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-pencil-square-o"></i>
+            </button>
+            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-trash"></i>
+            </button>
+            <a href class="option-btn"><span class="label label-danger">deactivate</span></a>
+          </div></td>
               </tr>
               <tr>
-                <td><a href="pages/examples/invoice.html">OR7429</a></td>
-                <td>Samsung Smart TV</td>
-                <td><span class="label label-info">Processing</span></td>
+                <td><a href="pages/examples/invoice.html">Firm4</a></td>
+                <td>Chatard Accountants</td>
+                <td><span><b>20-7-17</b></span></td>
+				<td><span class="label label-danger"><b>In-active</b></span></td>
                 <td>
-                  <div class="sparkbar" data-color="#00c0ef" data-height="20">90,80,-90,70,-61,83,63</div>
+                  <div class="sparkbar" data-color="#00c0ef" data-height="20">92525</div>
                 </td>
+				 <td> <div class="box-tools pull-right">
+				  <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-pencil-square-o"></i>
+            </button>
+            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-trash"></i>
+            </button>
+           <a href class="option-btn"><span class="label label-danger">deactivate</span></a>
+          </div></td>
               </tr>
               <tr>
-                <td><a href="pages/examples/invoice.html">OR1848</a></td>
-                <td>Samsung Smart TV</td>
-                <td><span class="label label-warning">Pending</span></td>
+                <td><a href="pages/examples/invoice.html">Firm5</a></td>
+                <td>Chatard Accountants</td>
+                <td><span><b>20-07-17</b></span></td>
+				<td><span class="label label-success"><b>Active</b></span></td>
                 <td>
-                  <div class="sparkbar" data-color="#f39c12" data-height="20">90,80,-90,70,61,-83,68</div>
+                  <div class="sparkbar" data-color="#f39c12" data-height="20">90251</div>
                 </td>
+				 <td> <div class="box-tools pull-right">
+				  <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-pencil-square-o"></i>
+            </button>
+            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-trash"></i>
+            </button>
+            <a href class="option-btn"><span class="label label-danger">deactivate</span></a>
+          </div></td>
               </tr>
               <tr>
-                <td><a href="pages/examples/invoice.html">OR7429</a></td>
-                <td>iPhone 6 Plus</td>
-                <td><span class="label label-danger">Delivered</span></td>
+                <td><a href="pages/examples/invoice.html">Firm6</a></td>
+                <td>Chatard Accountants</td>
+                <td><span><b>20-07-17</b></span></td>
+				 <td><span class="label label-success"><b>Active</b></span></td>
                 <td>
-                  <div class="sparkbar" data-color="#f56954" data-height="20">90,-80,90,70,-61,83,63</div>
+                  <div class="sparkbar" data-color="#f56954" data-height="20">90454</div>
                 </td>
+				 <td> <div class="box-tools pull-right">
+				  <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-pencil-square-o"></i>
+            </button>
+            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-trash"></i>
+            </button>
+            <a href class="option-btn"><span class="label label-danger">deactivate</span></a>
+          </div></td>
               </tr>
               <tr>
-                <td><a href="pages/examples/invoice.html">OR9842</a></td>
-                <td>Call of Duty IV</td>
-                <td><span class="label label-success">Shipped</span></td>
+                <td><a href="pages/examples/invoice.html">Firm7</a></td>
+                <td>Chatard Accountants</td>
+                <td><span><b>20-07-17</b></span></td>
+				<td><span class="label label-danger"><b>In-active</b></span></td>
                 <td>
-                  <div class="sparkbar" data-color="#00a65a" data-height="20">90,80,90,-70,61,-83,63</div>
+                  <div class="sparkbar" data-color="#00a65a" data-height="20">92589</div>
                 </td>
+				 <td> <div class="box-tools pull-right">
+				  <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-pencil-square-o"></i>
+            </button>
+            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-trash"></i>
+            </button>
+             <a href class="option-btn"><span class="label label-danger">deactivate</span></a>
+          </div></td>
               </tr>
               </tbody>
             </table>
           </div>
         </div>
         <div class="box-footer clearfix">
-          <a href="javascript:void(0)" class="btn btn-sm btn-info btn-flat pull-left">Place New Order</a>
-          <a href="javascript:void(0)" class="btn btn-sm btn-default btn-flat pull-right">View All Orders</a>
+         
+          <a href="javascript:void(0)" class="btn btn-sm btn-default btn-flat pull-right">View All Companies</a>
         </div>
       </div>
     </div>

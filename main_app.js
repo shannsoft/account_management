@@ -31,6 +31,21 @@ app.config(function($stateProvider, $urlRouterProvider) {
       //loggedout: checkLoggedout
     //}
   })
+  .state('userlist',{
+	  templateUrl:'views/userlist.html',
+	  url:'/userlist',
+	  //resolve:{
+		  //loggedout:checkLoggedout
+	  //}
+	  
+  } )
+  .state('newuser',{
+	  templateUrl:'views/newuser.html',
+	  url:'/newuser',
+	  //resolve:{
+		  //loggedout:checkLoggedout
+	  //}
+  })
   function checkLoggedout($q, $timeout, $rootScope, $state, $localStorage) {
     var deferred = $q.defer();
     accessToken = localStorage.getItem('accessToken')

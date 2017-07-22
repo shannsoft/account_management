@@ -3,13 +3,16 @@
 <div class="content">
 <div class="register-logo">
     <a>
-        <b>Add A New Company sdvgarg </b>
+        <b>Add A New Company</b>
 </div>
-<div class="row">
+
+	<div class="row" style="margin-left:100px; margin-right:100px;">
  
-        <div class="register-box-body">
-            <form name="register">
-			<div class="cl-xs-6" style="width:538px; float:left;">
+        <div class="register-box-body" style="background:#ecf0f5;">
+            <form name="compadd">
+			<div class="box box-danger">
+			<div class="box-body">
+			<div class="cl-xs-6" style="width:50%; float:left;">
                 <div class="form-group has-feedback">
 				<select class="form-control" >
 				<option><i class="fa fa-sort-desc"></i>Enter Firm-type</option>
@@ -23,7 +26,7 @@
                     <span class="glyphicon glyphicon-user form-control-feedback"></span>
                 </div>
                 <div class="form-group has-feedback">
-                    <input type="date" class="form-control" placeholder="Date of incorporation" name="corpdate">
+                    <input type="date" class="form-control" placeholder="Date of incorporation">
                    
                 </div>
                 <div class="form-group has-feedback">
@@ -37,6 +40,10 @@
 				 <div class="form-group has-feedback">
                     <input type="tel" class="form-control" placeholder="Phone Number">
                    
+                </div>
+				<div class="form-group has-feedback">
+                    <input type="text" class="form-control" placeholder="Pan no of Firm">
+                    
                 </div>
 				
 				 <div class="box box-danger">
@@ -90,18 +97,43 @@
                                             <input type="text" class="form-control" placeholder="ID">
                                         </div>
 										<div class="col-xs-2">
-                                            <input type="text" class="form-control" placeholder="PAN">
+                                            <input type="text" class="form-control" placeholder="PANt">
                                         </div>
                                     </div>
                                 </div>
                             </div>
-				
+							<div class="box box-danger">
+                                <div class="box-header">
+                                    <h3 class="box-title">Bank details</h3>
+                                </div>
+                                <div class="box-body">
+								
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <input type="text" class="form-control" placeholder="Name of Bank ">
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <input type="text" class="form-control" placeholder="Name of Branch">
+                                        </div>
+										</div>
+										<div class="row">
+                                        <div class="col-xs-4">
+                                            <input type="text" class="form-control" placeholder="Account Type">
+                                        </div>
+										<div class="col-xs-4">
+                                            <input type="text" class="form-control" placeholder="Account No">
+                                        </div>
+										<div class="col-xs-4">
+                                            <input type="text" class="form-control" placeholder="IFSC">
+                                        </div>
+                                    </div>
+                                </div>
 				</div>
-		<div class="col-xs-6" style="float:right;">
-				 <div class="form-group has-feedback">
-                    <input type="text" class="form-control" placeholder="Pan no of Firm">
-                    
-                </div>
+				
+				 
+				</div>
+		<div class="col-xs-6" style="width:50%; float:right;">
+				
 				 <div class="form-group has-feedback">
                     <input type="text" class="form-control" placeholder="GST No">
                     
@@ -131,7 +163,12 @@
                     
                 </div>
 				 <div class="form-group has-feedback">
-                    <input type="text" class="form-control" placeholder="Designation">
+                   <select class="form-control" >
+				<option><i class="fa fa-sort-desc"></i>Designation</option>
+				<option value>A</option>
+				<option value="2">B</option>
+				<option value="3">C</option>
+                    </select>
                     
                 </div>
 				 <div class="form-group has-feedback">
@@ -150,6 +187,18 @@
                     <input type="text" class="form-control" placeholder="Assessing Office">
                     
                 </div>
+				 <div class="form-group has-feedback">
+                    <input type="text" class="form-control" placeholder="Authorized Shared Capital">
+                    
+                </div>
+				 <div class="form-group has-feedback">
+                    <input type="text" class="form-control" placeholder="Paid-up Share Capital">
+                    
+                </div>
+				 <div class="form-group has-feedback">
+                    <input type="text" class="form-control" placeholder="Free Value of Share">
+                    
+                </div>
 				</div>
                 <div class="row">
                     <div class="col-xs-12">
@@ -159,12 +208,14 @@
                             <a href="#">terms</a>
                         </label>
                     </div>
-                    <div class="col-xs-12">
-                        <button type="button" class="btn btn-primary btn-block btn-flat">ADD</button>
+                    <div class="col-md-2">
+                        <button type="button" class="btn btn-primary btn-block btn-flat" style="margin-left:420px; ">ADD</button>
                     </div>
                 </div>
+				</div>
+				</div>
             </form>
-            <a ui-sref="login" class="text-center">I already have added the company</a>
+      
         </div>
  
 	
