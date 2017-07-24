@@ -53,8 +53,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
 		  //loggedout:checkLoggedout
 	  //}
 	  
-  } )
-  .state('forgot-password'{
+  })
+  .state('forgot-password',{
 	  templateUrl:'views/resetpassword.html',
 	  url:'forgot-password',
 	  //resolve:{
