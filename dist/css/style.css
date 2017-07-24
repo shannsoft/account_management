@@ -4986,3 +4986,13 @@ table.text-center th {
     white-space: normal !important;
   }
 }
+.label-font{
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+.m-r-5{margin-right:5px;}
+.m-b-10{
+  margin-bottom: 10px;
+}

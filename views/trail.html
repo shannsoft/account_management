@@ -6,122 +6,82 @@
 </section>
 <section class="content">
 	<div class="row">
-		<div class="col-sm-8 col-md-offset-2">
+		<div class="col-sm-12">
 			<div class="box box-info ">
 				 <div class="box-header with-border">
 					<h3 class="box-title">Add Trail Sheet</h3>
 				 </div>
-				<form class="form-horizontal" name="addUser">
+				<form name="addUser">
 					 <div class="box-body">
-						<div class="form-group">
-								<label for="lname" class="col-sm-3 control-label">Company Name:</label>
-							<div class="col-sm-8">
-								<select class="form-control" >
-										<option><i class="fa fa-sort-desc"></i>Enter a Company Name</option>
-										<option>A</option>
-										<option>B</option>
-										<option>C</option>
-								</select>
-								<span class="help-block" ng-show="addUser.fname.$error.required && addUser.fname.$touched">First name is required</span>
-								<span class="help-block" ng-show="addUser.fname.$error.pattern && addUser.fname.$touched">Numeric not allowed</span>
-							</div>
-						</div>
-
-						<div class="form-group has-feedback">
-							<div class="col-sm-6">
-								<label for="lname" class="col-sm-5 control-label">Trail Balance from:</label>
-								<div class="col-sm-7">
-									<input type="date" class="form-control" >
+						 <div class="col-sm-4">
+							<div class="form-group">
+								<label for="lname" class="control-label">Company Name:</label>
+								<div class="clearfix">
+									<select class="form-control" >
+											<option><i class="fa fa-sort-desc"></i>Enter a Company Name</option>
+											<option>A</option>
+											<option>B</option>
+											<option>C</option>
+									</select>
+									<span class="help-block" ng-show="addUser.fname.$error.required && addUser.fname.$touched">First name is required</span>
+									<span class="help-block" ng-show="addUser.fname.$error.pattern && addUser.fname.$touched">Numeric not allowed</span>
 								</div>
 							</div>
-							<div class="col-sm-6">
-								<label for="lname" class="col-sm-5 control-label">Trail Balance To:</label>
-								<div class="col-sm-7">
+						</div>
+						<div class="col-sm-4">
+							<div class="form-group has-feedback">
+								<label for="lname" class="control-label">Trail Balance from:</label>
+								<div class="clearfix">
 									<input type="date" class="form-control" >
 								</div>
 							</div>
 						</div>
-
-						<div class="form-group">
-								<label for="lname" class="col-sm-3 control-label">Trail Balance File:</label>
-							<div class="col-sm-8">
-								<input type="file" value="upload">
-								<span class="help-block" ng-show="addUser.fname.$error.required && addUser.fname.$touched">First name is required</span>
-								<span class="help-block" ng-show="addUser.fname.$error.pattern && addUser.fname.$touched">Numeric not allowed</span>
+						<div class="col-sm-4">
+							<div class="form-group has-feedback">
+								<label for="lname" class="control-label">Trail Balance To:</label>
+								<div class="clearfix">
+									<input type="date" class="form-control" >
+								</div>
 							</div>
 						</div>
-
-						<div class="form-group">
-								<label for="lname" class="col-sm-3 control-label">Manual Entry:</label>
-							<div class="col-sm-8 checkbox">
-								<input type="checkbox" name="manual_entry" ng-model="entry">
-								<span class="help-block" ng-show="addUser.fname.$error.required && addUser.fname.$touched">First name is required</span>
-								<span class="help-block" ng-show="addUser.fname.$error.pattern && addUser.fname.$touched">Numeric not allowed</span>
+			
+						
+						<div class="col-sm-4">
+							<div class="form-group">
+								<label for="lname" class="control-label">Trail Balance File:</label>
+								<div class="clearfix">
+									<input type="file" value="upload">
+									<span class="help-block" ng-show="addUser.fname.$error.required && addUser.fname.$touched">First name is required</span>
+									<span class="help-block" ng-show="addUser.fname.$error.pattern && addUser.fname.$touched">Numeric not allowed</span>
+								</div>
 							</div>
-							
-							
 						</div>
-				 <div class="box" ng-if="entry">
-                                <div class="box-header">
-                                    <h3 class="box-title">Enter your Datas Manually</h3>
-                                </div>
-                                <div class="box-body">
-								
-                                    <div class="row">
-                                        <div class="col-sm-3">
+						<div class="col-sm-4">
+							<div class="form-group">
+								<span for="lname" class="label-font m-r-5">Manual Entry:</span>
+								<label>
+									<input type="checkbox" name="manual_entry" ng-model="entry">
+									<span class="help-block" ng-show="addUser.fname.$error.required && addUser.fname.$touched">First name is required</span>
+									<span class="help-block" ng-show="addUser.fname.$error.pattern && addUser.fname.$touched">Numeric not allowed</span>
+								</label>
+							</div>
+
+						</div>
+						<div class="col-sm-12"><hr/></div>
+				 	<div class="clearfix" ng-if="entry">
+								<div class="row">
+                                    <div class="col-sm-12">
+		                                <div class="box-header">
+		                                    <h3 class="box-title">Enter your Datas Manually</h3>
+		                                </div>
+	                                </div>
+	                            </div>
+                             
+                                    <div class="row m-b-10">
+                                        <div class="col-sm-2">
                                             <input type="text" class="form-control" placeholder="Particulars ">
-                                        </div>
-                                        <div class="col-sm-3">
-                                           <select class="form-control" >
-													<option><i class="fa fa-sort-desc"></i>Debit/Credit</option>
-													
-													<option>Credit</option>
-													<option>Debit</option>
-											</select>
                                         </div>
                                         <div class="col-sm-2">
-                                            <input type="text" class="form-control" placeholder="Amount">
-                                        </div>
-										<div class="col-sm-2">
-                                            <input type="text" class="form-control" placeholder="Group">
-                                        </div>
-										<div class="col-sm-2">
-                                            <input type="text" class="form-control" placeholder="P.Group">
-                                        </div>
-                                    </div>
-                                </div>
-								  
-							 <div class="box-body">
-								
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <input type="text" class="form-control" placeholder="Particulars ">
-                                        </div>
-                                        <div class="col-sm-3">
-                                           <select class="form-control" >
-													<option><i class="fa fa-sort-desc"></i>Debit/Credit</option>
-													<option>Credit</option>
-													<option>Debit</option>
-											</select>
-                                        </div>
-                                        <div class="col-sm-2">
-                                            <input type="text" class="form-control" placeholder="Amount">
-                                        </div>
-										<div class="col-sm-2">
-                                            <input type="text" class="form-control" placeholder="Group">
-                                        </div>
-										<div class="col-sm-2">
-                                            <input type="text" class="form-control" placeholder="P.Group">
-                                        </div>
-                                    </div>
-                                </div>
-								   <div class="box-body">
-								
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <input type="text" class="form-control" placeholder="Particulars ">
-                                        </div>
-                                        <div class="col-sm-3">
                                            <select class="form-control" >
 													<option><i class="fa fa-sort-desc"></i>Debit/Credit</option>
 													<option>Credit</option>
@@ -138,16 +98,99 @@
 										<div class="col-sm-2">
                                             <input type="text" class="form-control" placeholder="P.Group">
                                         </div>
+										<div class="col-sm-2">
+                                           <button type="button" class="btn btn-danger btn-sm">
+	                  							<i class="fa fa-minus"></i>
+	                  						</button>
+                                           
+                                        </div>
                                     </div>
-                                </div>
+                                    <div class="row m-b-10">
+                                        <div class="col-sm-2">
+                                            <input type="text" class="form-control" placeholder="Particulars ">
+                                        </div>
+                                        <div class="col-sm-2">
+                                           <select class="form-control" >
+													<option><i class="fa fa-sort-desc"></i>Debit/Credit</option>
+													<option>Credit</option>
+													<option>Debit</option>
+													
+											</select>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <input type="text" class="form-control" placeholder="Amount">
+                                        </div>
+										<div class="col-sm-2">
+                                            <input type="text" class="form-control" placeholder="Group">
+                                        </div>
+										<div class="col-sm-2">
+                                            <input type="text" class="form-control" placeholder="P.Group">
+                                        </div>
+										<div class="col-sm-2">
+                                           <button type="button" class="btn btn-danger btn-sm">
+	                  							<i class="fa fa-minus"></i>
+	                  						</button>
+                                        </div>
+                                    </div>
+                                    <div class="row m-b-10">
+                                        <div class="col-sm-2">
+                                            <input type="text" class="form-control" placeholder="Particulars ">
+                                        </div>
+                                        <div class="col-sm-2">
+                                           <select class="form-control" >
+													<option><i class="fa fa-sort-desc"></i>Debit/Credit</option>
+													<option>Credit</option>
+													<option>Debit</option>
+													
+											</select>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <input type="text" class="form-control" placeholder="Amount">
+                                        </div>
+										<div class="col-sm-2">
+                                            <input type="text" class="form-control" placeholder="Group">
+                                        </div>
+										<div class="col-sm-2">
+                                            <input type="text" class="form-control" placeholder="P.Group">
+                                        </div>
+										<div class="col-sm-2">
+                                           <button type="button" class="btn btn-danger btn-sm">
+	                  							<i class="fa fa-minus"></i>
+	                  						</button>
+                                        </div>
+                                    </div>
+                                    <div class="row m-b-10">
+                                        <div class="col-sm-2">
+                                            <input type="text" class="form-control" placeholder="Particulars ">
+                                        </div>
+                                        <div class="col-sm-2">
+                                           <select class="form-control" >
+													<option><i class="fa fa-sort-desc"></i>Debit/Credit</option>
+													<option>Credit</option>
+													<option>Debit</option>
+													
+											</select>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <input type="text" class="form-control" placeholder="Amount">
+                                        </div>
+										<div class="col-sm-2">
+                                            <input type="text" class="form-control" placeholder="Group">
+                                        </div>
+										<div class="col-sm-2">
+                                            <input type="text" class="form-control" placeholder="P.Group">
+                                        </div>
+										<div class="col-sm-2">
+                                           <button type="button" class="btn btn-danger btn-sm">
+	                  							<i class="fa fa-minus"></i>
+	                  						</button>
+                                           <button type="button" class="btn btn-info btn-sm">
+	                  							<i class="fa fa-plus"></i>
+	                  						</button>
+                                        </div>
+                                    </div>
+                       
                             </div>							
-
-
-
-
-
-
-
 
 
 
