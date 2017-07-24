@@ -45,7 +45,7 @@
 						<div class="form-group">
 								<label for="lname" class="col-sm-3 control-label">Trail Balance File:</label>
 							<div class="col-sm-8">
-								<input type="file" class="form-control" placeholder="Upload">
+								<input type="file" value="upload">
 								<span class="help-block" ng-show="addUser.fname.$error.required && addUser.fname.$touched">First name is required</span>
 								<span class="help-block" ng-show="addUser.fname.$error.pattern && addUser.fname.$touched">Numeric not allowed</span>
 							</div>
@@ -58,8 +58,90 @@
 								<span class="help-block" ng-show="addUser.fname.$error.required && addUser.fname.$touched">First name is required</span>
 								<span class="help-block" ng-show="addUser.fname.$error.pattern && addUser.fname.$touched">Numeric not allowed</span>
 							</div>
+							
+							
 						</div>
-
+				 <div class="box" ng-if="entry">
+                                <div class="box-header">
+                                    <h3 class="box-title">Enter your Datas Manually</h3>
+                                </div>
+                                <div class="box-body">
+								
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <input type="text" class="form-control" placeholder="Particulars ">
+                                        </div>
+                                        <div class="col-sm-3">
+                                           <select class="form-control" >
+													<option><i class="fa fa-sort-desc"></i>Debit/Credit</option>
+													<option>A</option>
+													<option>B</option>
+													<option>C</option>
+											</select>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <input type="text" class="form-control" placeholder="Amount">
+                                        </div>
+										<div class="col-sm-2">
+                                            <input type="text" class="form-control" placeholder="Group">
+                                        </div>
+										<div class="col-sm-2">
+                                            <input type="text" class="form-control" placeholder="P.Group">
+                                        </div>
+                                    </div>
+                                </div>
+								  
+							 <div class="box-body">
+								
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <input type="text" class="form-control" placeholder="Particulars ">
+                                        </div>
+                                        <div class="col-sm-3">
+                                           <select class="form-control" >
+													<option><i class="fa fa-sort-desc"></i>Debit/Credit</option>
+													<option>A</option>
+													<option>B</option>
+													<option>C</option>
+											</select>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <input type="text" class="form-control" placeholder="Amount">
+                                        </div>
+										<div class="col-sm-2">
+                                            <input type="text" class="form-control" placeholder="Group">
+                                        </div>
+										<div class="col-sm-2">
+                                            <input type="text" class="form-control" placeholder="P.Group">
+                                        </div>
+                                    </div>
+                                </div>
+								   <div class="box-body">
+								
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <input type="text" class="form-control" placeholder="Particulars ">
+                                        </div>
+                                        <div class="col-sm-3">
+                                           <select class="form-control" >
+													<option><i class="fa fa-sort-desc"></i>Debit/Credit</option>
+													<option>A</option>
+													<option>B</option>
+													<option>C</option>
+											</select>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <input type="text" class="form-control" placeholder="Amount">
+                                        </div>
+										<div class="col-sm-2">
+                                            <input type="text" class="form-control" placeholder="Group">
+                                        </div>
+										<div class="col-sm-2">
+                                            <input type="text" class="form-control" placeholder="P.Group">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>							
 
 
 
