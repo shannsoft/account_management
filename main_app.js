@@ -46,6 +46,14 @@ app.config(function($stateProvider, $urlRouterProvider) {
 		  //loggedout:checkLoggedout
 	  //}
   })
+  .state('trail-balance',{
+	  templateUrl:'views/trail.html',
+	  url:'/trail-balance',
+	  //resolve:{
+		  //loggedout:checkLoggedout
+	  //}
+	  
+  } )
   function checkLoggedout($q, $timeout, $rootScope, $state, $localStorage) {
     var deferred = $q.defer();
     accessToken = localStorage.getItem('accessToken')

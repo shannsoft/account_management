@@ -1,0 +1,78 @@
+<section class="content-header">
+  <h1>
+    Trail Sheet
+    <small>Control panel</small>
+  </h1>
+</section>
+<section class="content">
+	<div class="row">
+		<div class="col-sm-8 col-md-offset-2">
+			<div class="box box-info ">
+				 <div class="box-header with-border">
+					<h3 class="box-title">Add Trail Sheet</h3>
+				 </div>
+				<form class="form-horizontal" name="addUser">
+					 <div class="box-body">
+						<div class="form-group">
+								<label for="lname" class="col-sm-3 control-label">Company Name:</label>
+							<div class="col-sm-8">
+								<select class="form-control" >
+										<option><i class="fa fa-sort-desc"></i>Enter a Company Name</option>
+										<option>A</option>
+										<option>B</option>
+										<option>C</option>
+								</select>
+								<span class="help-block" ng-show="addUser.fname.$error.required && addUser.fname.$touched">First name is required</span>
+								<span class="help-block" ng-show="addUser.fname.$error.pattern && addUser.fname.$touched">Numeric not allowed</span>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-sm-5 col-md-offset-1">
+								<label for="lname" class="col-sm-4 control-label">Trail Balance from:</label>
+								<div class="col-sm-7">
+									<input type="date" class="form-control" >
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<label for="lname" class="col-sm-4 control-label">Trail Balance To:</label>
+								<div class="col-sm-7">
+									<input type="date" class="form-control" >
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+								<label for="lname" class="col-sm-3 control-label">Trail Balance File:</label>
+							<div class="col-sm-8">
+								<input type="file" class="form-control" placeholder="Upload">
+								<span class="help-block" ng-show="addUser.fname.$error.required && addUser.fname.$touched">First name is required</span>
+								<span class="help-block" ng-show="addUser.fname.$error.pattern && addUser.fname.$touched">Numeric not allowed</span>
+							</div>
+						</div>
+
+						<div class="form-group">
+								<label for="lname" class="col-sm-3 control-label">Manual Entry:</label>
+							<div class="col-sm-8 checkbox">
+								<input type="checkbox" name="manual_entry" ng-model="entry">
+								<span class="help-block" ng-show="addUser.fname.$error.required && addUser.fname.$touched">First name is required</span>
+								<span class="help-block" ng-show="addUser.fname.$error.pattern && addUser.fname.$touched">Numeric not allowed</span>
+							</div>
+						</div>
+
+
+
+
+
+
+
+
+
+
+
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
