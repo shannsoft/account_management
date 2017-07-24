@@ -5,7 +5,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
   .state('login', {
       templateUrl: 'views/login.html',
       url: '/login',
-	  controller:'LoginCtrl'
+	  // controller:'LoginCtrl'
       //resolve: {
         //loggedout: checkLoggedin
       //}
@@ -56,7 +56,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
   })
   .state('forgot-password',{
 	  templateUrl:'views/resetpassword.html',
-	  url:'forgot-password',
+	  url:'/forgot-password',
 	  //resolve:{
 		  //loggedout:checkLoggedout
 	  //}

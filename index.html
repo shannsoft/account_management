@@ -38,10 +38,10 @@
     <div id="preloader" ng-if="showPreloader">
       <div id="status"><i class="fa fa-spinner fa-spin"></i></div>
     </div>
-    <div class="" ng-if="is_loggedin">
+    <div class="" ng-if="!is_loggedin">
       <div ui-view></div>
     </div>
-    <div class="" ng-if="!is_loggedin">
+    <div class="" ng-if="is_loggedin">
       <div class="wrapper" >
         <div ng-include="'views/header.html'"></div>
         <div ng-include="'views/sidebar.html'"></div>
