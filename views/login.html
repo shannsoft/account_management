@@ -2,7 +2,7 @@
   <div class="login-logo">
     <h2>Account Management</h2>
   </div>
-  <form class="">
+
       <div class="login-box-body">
         <p class="login-box-msg">Sign in to start your session</p>
         <form name="login">
@@ -30,11 +30,16 @@
             </div>
           </div>
         </form>
-        <!-- <a href="">I forgot my password</a><br> -->
+         <li  ng-class="{'active':stateName == 'forgot-password'}" style=" list-style:none;">
+  <a href="" ui-sref="forgot-password">
+   <button type="button" class="btn btn-primary right">
+   Forgot your Password</button>
+	</a>
+	</li>
         <!-- <a ui-sref="register" class="text-center">Register a new membership</a> -->
 
       </div>
 
-  </form>
+
   <!-- /.login-box-body -->
 </div>

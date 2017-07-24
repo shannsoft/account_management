@@ -54,6 +54,14 @@ app.config(function($stateProvider, $urlRouterProvider) {
 	  //}
 	  
   } )
+  .state('forgot-password'{
+	  templateUrl:'views/resetpassword.html',
+	  url:'forgot-password',
+	  //resolve:{
+		  //loggedout:checkLoggedout
+	  //}
+  
+  })
   function checkLoggedout($q, $timeout, $rootScope, $state, $localStorage) {
     var deferred = $q.defer();
     accessToken = localStorage.getItem('accessToken')
