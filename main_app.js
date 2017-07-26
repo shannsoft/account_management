@@ -5,7 +5,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
   .state('login', {
       templateUrl: 'views/login.html',
       url: '/login',
-	  // controller:'LoginCtrl'
+	  //controller:'LoginCtrl'
       //resolve: {
         //loggedout: checkLoggedin
       //}
@@ -27,6 +27,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
   .state('newemployee', {
     templateUrl: 'views/newemployee.html',
     url: '/newemployee',
+	controller:'EmployeeController',
     //resolve: {
       //loggedout: checkLoggedout
     //}
@@ -49,6 +50,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
   .state('trail-balance',{
 	  templateUrl:'views/trail.html',
 	  url:'/trail-balance',
+	  controller:'TrailController',
 	  //resolve:{
 		  //loggedout:checkLoggedout
 	  //}
@@ -62,6 +64,23 @@ app.config(function($stateProvider, $urlRouterProvider) {
 	  //}
   
   })
+  .state('userProfile',{
+	  templateUrl:'views/profile1.html',
+	  url:'/userProfile',
+	  //controller:'TrailController',
+	  //resolve:{
+		  //loggedout:checkLoggedout
+	  //}
+	  
+  })
+  .state('ca-firm',{
+	  templateUrl:'views/firm.html',
+	  url:'/ca-firm',
+	  //resolve:{
+		  //loggedout:checkLoggedout
+	  //}
+  })
+  
   function checkLoggedout($q, $timeout, $rootScope, $state, $localStorage) {
     var deferred = $q.defer();
     accessToken = localStorage.getItem('accessToken')
