@@ -15,14 +15,14 @@
 					 <div class="box-body">
 						<div class="row">
 						 <div class="col-sm-4">
-							<div class="form-group">
+							<div class="form-group" ng-class="{'has-error':trailSheet.comp_name.$touched && trailSheet.comp_name.$invalid}">
 								<label for="lname" class="control-label">Company Name:</label>
 								<div class="clearfix">
 									<select class="form-control" name="comp_name" ng-model="company.name" required >
-											<option><i class="fa fa-sort-desc"></i>Enter a Company Name</option>
-											<option>A</option>
-											<option>B</option>
-											<option>C</option>
+											<option value><i class="fa fa-sort-desc"></i>Enter a Company Name</option>
+											<option value="2">A</option>
+											<option value="3">B</option>
+											<option value="4">C</option>
 									</select>
 									<span class="help-block" ng-show="trailSheet.comp_name.$error.required && trailSheet.comp_name.$touched">Select One Company</span>
 									
@@ -30,7 +30,7 @@
 							</div>
 						</div>
 						<div class="col-sm-4">
-							<div class="form-group has-feedback">
+							<div class="form-group has-feedback" ng-class="{'has-error':trailSheet.trail_from.$touched && trailSheet.trail_from.$invalid}">
 								<label for="lname" class="control-label">Trail Balance from:</label>
 								<div class="clearfix">
 									<input type="date" class="form-control" name="trail_from" ng-model="trail.from" required>
@@ -39,7 +39,7 @@
 							</div>
 						</div>
 						<div class="col-sm-4">
-							<div class="form-group has-feedback">
+							<div class="form-group has-feedback" ng-class="{'has-error':trailSheet.trail_to.$touched && trailSheet.trail_to.$invalid}">
 								<label for="lname" class="control-label">Trail Balance To:</label>
 								<div class="clearfix">
 									<input type="date" class="form-control" name="trail_to" ng-model="trail.to" required>
@@ -50,7 +50,7 @@
 					</div>
 					<div class="row">	
 						<div class="col-sm-4">
-							<div class="form-group">
+							<div class="form-group" ng-class="{'has-error':trailSheet.trail_file.$touched && trailSheet.trail_file.$invalid}">
 								<label for="lname" class="control-label">Trail Balance File:</label>
 								<div class="clearfix">
 									<input type="file" value="upload" name="trail_file" ng-model="trail.file"  required>
@@ -77,7 +77,8 @@
 						</div>
 						</div>
 				</div>
-						<div class="col-sm-12"><hr/></div>
+			<div class="col-sm-12"><hr/></div>
+			
 				 	<div class="clearfix" ng-if="entry">
 								<div class="row">
                                     <div class="col-sm-12">
@@ -126,7 +127,105 @@
 
 					</div>
 				</form>
-			</div>
+				<div class="clear-fix">
+				<div class="row">
+					<div class="col-sm-12">
+					<div class="box box-info">
+						<div class="box-body">
+						<div class="col-sm-5">
+							<table id="old_trail" class="table table-bordered table-hover">
+								<thead>
+									<tr>
+										<th>Ledger</th>																		
+										<th>Credit</th>
+										<th>Debit</th>											
+										<th>Note Group</th>		
+										<th>Note Ledger</th>											
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th>Ledger</th>																		
+										<th>Credit</th>
+										<th>Debit</th>											
+										<th>Note Group</th>		
+										<th>Note Ledger</th>											
+									</tr>
+									<tr>
+										<th>Ledger</th>																		
+										<th>Credit</th>
+										<th>Debit</th>											
+										<th>Note Group</th>		
+										<th>Note Ledger</th>											
+									</tr>
+									<tr>
+										<th>Ledger</th>																		
+										<th>Credit</th>
+										<th>Debit</th>											
+										<th>Note Group</th>		
+										<th>Note Ledger</th>											
+									</tr>
+									<tr>
+										<th>Ledger</th>																		
+										<th>Credit</th>
+										<th>Debit</th>											
+										<th>Note Group</th>		
+										<th>Note Ledger</th>											
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="col-sm-2"></div>
+						<div class="col-sm-5">
+							<table id="new_trail" class="table table-bordered table-hover">
+								<thead>
+									<tr>
+										<th>Ledger</th>																		
+										<th>Credit</th>
+										<th>Debit</th>											
+										<th>Note Group</th>		
+										<th>Note Ledger</th>											
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th>Ledger</th>																		
+										<th>Credit</th>
+										<th>Debit</th>											
+										<th>Note Group</th>		
+										<th>Note Ledger</th>											
+									</tr>
+									<tr>
+										<th>Ledger</th>																		
+										<th>Credit</th>
+										<th>Debit</th>											
+										<th>Note Group</th>		
+										<th>Note Ledger</th>											
+									</tr>
+									<tr>
+										<th>Ledger</th>																		
+										<th>Credit</th>
+										<th>Debit</th>											
+										<th>Note Group</th>		
+										<th>Note Ledger</th>											
+									</tr>
+									<tr>
+										<th>Ledger</th>																		
+										<th>Credit</th>
+										<th>Debit</th>											
+										<th>Note Group</th>		
+										<th>Note Ledger</th>											
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						</div>
+					</div>
+					</div>
+					</div>
+					</div>
+					</div>
+					</div>
 		</div>
-	</div>
+	
 </section>

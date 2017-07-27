@@ -64,9 +64,9 @@ app.config(function($stateProvider, $urlRouterProvider) {
 	  //}
   
   })
-  .state('userProfile',{
-	  templateUrl:'views/profile1.html',
-	  url:'/userProfile',
+  .state('profile',{
+	  templateUrl:'views/profile.html',
+	  url:'/profile',
 	  //controller:'TrailController',
 	  //resolve:{
 		  //loggedout:checkLoggedout
@@ -74,8 +74,17 @@ app.config(function($stateProvider, $urlRouterProvider) {
 	  
   })
   .state('ca-firm',{
-	  templateUrl:'views/firm.html',
+	  templateUrl:'views/details.html',
 	  url:'/ca-firm',
+	  //controller:'FirmController',
+	  //resolve:{
+		  //loggedout:checkLoggedout
+	  //}
+  })
+  .state('ca-update',{
+	  templateUrl:'views/firm.html',
+	  url:'/ca-update',
+	  controller:'FirmController',
 	  //resolve:{
 		  //loggedout:checkLoggedout
 	  //}

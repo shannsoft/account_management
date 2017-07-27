@@ -1,6 +1,6 @@
 <section class="content-header">
   <h1>
-    Add New Company
+    Client
     <small>Control panel</small>
   </h1>
 </section>
@@ -10,13 +10,13 @@
 		<div class="col-sm-10 col-md-offset-1">
 			<div class="box box-info ">
 		      <div class="box-header with-border">
-		        <h3 class="box-title">Add New Company</h3>
+		        <h3 class="box-title">Add A New Client</h3>
 		      </div>
 		      <form class="form-horizontal" name="addEmp">
 		        <div class="box-body">
 					<div class="row">
 								<div class="col-xs-6">
-									<div class="form-group has-feedback">
+									<div class="form-group has-feedback" ng-class="{'has-error':addEmp.firm_type.$touched && addEmp.firm_type.$invalid}">
 										<label for="lname" class="col-sm-3 control-label">Firm Type:</label>
 										<div class="col-sm-9">
 											<select class="form-control" name="firm_type" ng-model="company.name"required>
@@ -29,7 +29,7 @@
 								
 										</div>
 									</div>
-									<div class="form-group has-feedback">
+									<div class="form-group has-feedback" ng-class="{'has-error':addEmp.comp_name.$touched && addEmp.comp_name.$invalid}">
 										<label for="uname" class="col-sm-3 control-label">Firm Name:</label>
 										<div class="col-sm-9">
 											<input type="text" name="comp_name" ng-model="comapny.name" class="form-control" placeholder="Farm name" required ng-pattern="/^(\D)+$/">
@@ -37,7 +37,7 @@
 											<span class="help-block" ng-show="addEmp.comp_name.$error.pattern && addEmp.comp_name.$touched">Numeric not allowed</span>
 										</div>		
 									</div>
-									<div class="form-group has-feedback">
+									<div class="form-group has-feedback" ng-class="{'has-error':addEmp.comp_tel.$touched && addEmp.comp_tel.$invalid}">
 												<label for="mobile" class="col-sm-3 control-label">Telephone:</label>
 												<div class="col-sm-9">
 													<input type="tel" name="comp_tel" ng-model="company.telephone" class="form-control" placeholder="Telephone No (optional)"  ng-pattern="/^[0-9]{10,10}$/">
@@ -45,7 +45,7 @@
 													<span class="help-block" ng-show="addEmp.comp_mobile.$error.pattern && addEmp.comp_mobile.$touched">Invalid Mobile No</span>-->
 												</div>		
 										</div>
-											<div class="form-group has-feedback">
+											<div class="form-group has-feedback" ng-class="{'has-error':addEmp.comp_mobile.$touched && addEmp.comp_mobile.$invalid}">
 												<label for="mobile" class="col-sm-3 control-label">Mobile:</label>
 												<div class="col-sm-9">
 													<input type="text" name="comp_mobile" ng-model="company.mobile" class="form-control" placeholder="Mobile No" required ng-pattern="/^[0-9]{10,10}$/">
@@ -56,7 +56,7 @@
 		
 								</div>
 						<div class="col-xs-6">
-								<div class="form-group has-feedback">
+								<div class="form-group has-feedback" ng-class="{'has-error':addEmp.date_incorp.$touched && addEmp.date_incorp.$invalid}">
 										<label for="lname" class="col-sm-3 control-label">Incorporation Date:</label>
 										<div class="col-sm-9">
 											 <input type="date" name="date_incorp" ng-model="company.date" class="form-control" placeholder="Date of incorporation" required>
@@ -64,7 +64,7 @@
 											
 										</div>	
 									</div>
-									<div class="form-group has-feedback">
+									<div class="form-group has-feedback" ng-class="{'has-error':addEmp.comp_gst.$touched && addEmp.comp_gst.$invalid}">
 												<label for="pass" class="col-sm-3 control-label">GST No:</label>
 											<div class="col-sm-9">
 											<input type="text" class="form-control" name="comp_gst" ng-model="company.gst" required placeholder="Gst No">
@@ -73,7 +73,7 @@
 								<!--<span class="help-block" ng-show="addUser.us_name.$error.pattern && addUser.us_name.$touched">Invalid Password</span>-->
 							</div>		
 		          	</div>
-							<div class="form-group has-feedback">
+							<div class="form-group has-feedback" ng-class="{'has-error':addEmp.comp_pan.$touched && addEmp.comp_pan.$invalid}">
 												<label for="pass" class="col-sm-3 control-label">PAN No:</label>
 												<div class="col-sm-9">
 													<input type="text" class="form-control" name="comp_pan" ng-model="company.pan" required placeholder="Pan no of Firm">
@@ -81,7 +81,7 @@
 													<!--<span class="help-block" ng-show="addUser.us_name.$error.pattern && addUser.us_name.$touched">Invalid Password</span>-->
 												</div>		
 										</div>
-										<div class="form-group has-feedback">
+										<div class="form-group has-feedback" ng-class="{'has-error':addEmp.comp_tan.$touched && addEmp.comp_tan.$invalid}">
 														<label for="pass" class="col-sm-3 control-label">TAN No:</label>
 													<div class="col-sm-9">
 														<input type="text" class="form-control" name="comp_tan" ng-model="company.tan" required placeholder="TAN No">
@@ -111,25 +111,25 @@
                                 <div class="box-body">
 									
                                    
-                                        <div class="col-xs-3">
+                                        <div class="col-xs-3" ng-class="{'has-error':addEmp.comp_country.$touched && addEmp.comp_country.$invalid}">
                                             <input type="text" class="form-control" placeholder="Country " name="comp_country" ng-model="company.country" required>
 											<span class="help-block" ng-show="addEmp.comp_country.$error.required && addEmp.comp_country.$touched">Please Enter Country</span>
                                         </div>
-                                        <div class="col-xs-3">
+                                        <div class="col-xs-3" ng-class="{'has-error':addEmp.comp_state.$touched && addEmp.comp_state.$invalid}">
                                             <input type="text" class="form-control" placeholder="State" name="comp_state" ng-model="company.state" required>
 											<span class="help-block" ng-show="addEmp.comp_state.$error.required && addEmp.comp_state.$touched">Please Enter State</span>
                                         </div>
 									
 										
-                                        <div class="col-xs-2">
+                                        <div class="col-xs-2" ng-class="{'has-error':addEmp.comp_city.$touched && addEmp.comp_city.$invalid}">
                                             <input type="text" class="form-control" placeholder="City" name="comp_city" ng-model="company.city" required>
 											<span class="help-block" ng-show="addEmp.comp_city.$error.required && addEmp.comp_city.$touched">Please Enter City</span>
                                         </div>
-										<div class="col-xs-2">
+										<div class="col-xs-2" ng-class="{'has-error':addEmp.comp_plot.$touched && addEmp.comp_plot.$invalid}">
                                             <input type="text" class="form-control" placeholder="Plot No/Lane" name="comp_plot" ng-model="company.plot" required>
 											<span class="help-block" ng-show="addEmp.comp_plot.$error.required && addEmp.comp_plot.$touched">Please Enter Plot No</span>
                                         </div>
-										<div class="col-xs-2">
+										<div class="col-xs-2" ng-class="{'has-error':addEmp.comp_pin.$touched && addEmp.comp_pin.$invalid}">
                                             <input type="text" class="form-control" placeholder="Pin" name="comp_pin" ng-model="company.pin" required>
 											<span class="help-block" ng-show="addEmp.comp_pin.$error.required && addEmp.comp_pin.$touched">Please Enter Pin</span>
 											
@@ -146,25 +146,25 @@
                                 <div class="box-body">
 									
                                    
-                                        <div class="col-xs-3">
+                                        <div class="col-xs-3" ng-class="{'has-error':addEmp.comp_country1.$touched && addEmp.comp_country1.$invalid}">
                                             <input type="text" class="form-control" placeholder="Country " name="comp_country1" ng-model="company.country1" required>
 											<span class="help-block" ng-show="addEmp.comp_country1.$error.required && addEmp.comp_country1.$touched">Please Enter Country</span>
                                         </div>
-                                        <div class="col-xs-3">
+                                        <div class="col-xs-3" ng-class="{'has-error':addEmp.comp_state1.$touched && addEmp.comp_state1.$invalid}">
                                             <input type="text" class="form-control" placeholder="State" name="comp_state1" ng-model="company.state1" required>
 											<span class="help-block" ng-show="addEmp.comp_state1.$error.required && addEmp.comp_state1.$touched">Please Enter State</span>
                                         </div>
 									
 										
-                                        <div class="col-xs-2">
+                                        <div class="col-xs-2" ng-class="{'has-error':addEmp.comp_city1.$touched && addEmp.comp_city1.$invalid}">
                                             <input type="text" class="form-control" placeholder="City" name="comp_city1" ng-model="company.city1" required>
 											<span class="help-block" ng-show="addEmp.comp_city1.$error.required && addEmp.comp_city1.$touched">Please Enter City</span>
                                         </div>
-										<div class="col-xs-2">
+										<div class="col-xs-2" ng-class="{'has-error':addEmp.comp_plot1.$touched && addEmp.comp_plot1.$invalid}">
                                             <input type="text" class="form-control" placeholder="Plot No/Lane" name="comp_plot1" ng-model="company.plot1" required>
 											<span class="help-block" ng-show="addEmp.comp_plot1.$error.required && addEmp.comp_plot1.$touched">Please Enter Plot No</span>
                                         </div>
-										<div class="col-xs-2">
+										<div class="col-xs-2"  ng-class="{'has-error':addEmp.comp_pin1.$touched && addEmp.comp_pin1.$invalid}">
                                             <input type="text" class="form-control" placeholder="Pin" name="comp_pin1" ng-model="company.pin1" required>
 											<span class="help-block" ng-show="addEmp.comp_pin1.$error.required && addEmp.comp_pin1.$touched">Please Enter Pin</span>
 											
@@ -179,12 +179,12 @@
                                 <div class="box-body">
 								
                                     <div class="row" ng-repeat="items in emp.add">
-                                        <div class="col-sm-4">
+                                        <div class="col-sm-4" ng-class="{'has-error':addEmp.director_name.$touched && addEmp.director_name.$invalid}">
                                             <input type="text" class="form-control" placeholder="Name " name="director_name" ng-model="items.name" required ng-pattern="/^(\D)+$/">
 											<span class="help-block" ng-show="addEmp.director_name.$error.required && addEmp.director_name.$touched">Please Enter Director's Name</span>
 											<span class="help-block" ng-show="addEmp.director_name.$error.pattern && addEmp.director_names.$touched">Numeric not allowed</span>
                                         </div>
-                                        <div class="col-sm-2">
+                                        <div class="col-sm-2" ng-class="{'has-error':addEmp.director_desig.$touched && addEmp.director_desig.$invalid}">
                                             <select class="form-control" name="director_desig" ng-model="items.designation" required >
 											<option><i class="fa fa-sort-desc"></i>Designation</option>
 											<option>a</option>
@@ -192,11 +192,11 @@
 											</select>
 											<span class="help-block" ng-show="addEmp.director_desig.$error.required && addEmp.director_desig.$touched">Designation is required</span>
                                         </div>
-                                        <div class="col-sm-2">
+                                        <div class="col-sm-2"  ng-class="{'has-error':addEmp.director_id.$touched && addEmp.director_id.$invalid}">
                                             <input type="text" class="form-control" placeholder="ID" name="director_id" ng-model="items.id" required>
 											<span class="help-block" ng-show="addEmp.director_id.$error.required && addEmp.director_id.$touched">ID is required</span>
                                         </div>
-										<div class="col-sm-2">
+										<div class="col-sm-2" ng-class="{'has-error':addEmp.director_pan.$touched && addEmp.director_pan.$invalid}">
                                             <input type="text" class="form-control" placeholder="PAN" name="director_pan" ng-model="items.pan" required>
 											<span class="help-block" ng-show="addEmp.director_pan.$error.required && addEmp.director_pan.$touched">PAN is required</span>
                                         </div>
@@ -222,7 +222,7 @@
 				<!--row started-->
 				<div class="row"> 
 					<div class="col-xs-6">
-								 <div class="form-group has-feedback">
+								 <div class="form-group has-feedback" ng-class="{'has-error':addEmp.acc_ofc.$touched && addEmp.acc_ofc.$invalid}">
 									<label for="mobile" class="col-sm-3 control-label">Accessing Office:</label>
 									<div class="col-sm-9">
 										<input type="text" name="acc_ofc" ng-model="company.ofc" class="form-control" placeholder="Accessing Office" required >
@@ -230,7 +230,7 @@
 										<!--<span class="help-block" ng-show="addEmp.acc_ofc.$error.pattern && addEmp.acc_ofc.$touched">Invalid Mobile No</span>-->
 									</div>		
 								</div>
-								  <div class="form-group has-feedback">
+								  <div class="form-group has-feedback" ng-class="{'has-error':addEmp.paid_cap.$touched && addEmp.paid_cap.$invalid}">
 													<label for="mobile" class="col-sm-3 control-label">Paid Up Share Capital:</label>
 													<div class="col-sm-9">
 														<input type="text" name="paid_cap" ng-model="company.capital" class="form-control" placeholder="Paid Up Share Capital" required ng-pattern="/^[0-9]{10,10}$/">
@@ -243,7 +243,7 @@
 
 					<div class="col-xs-6">
 							
-					 <div class="form-group has-feedback">
+					 <div class="form-group has-feedback"  ng-class="{'has-error':addEmp.comp_share_cap.$touched && addEmp.comp_share_cap.$invalid}">
 			          	<label for="mobile" class="col-sm-3 control-label">Authorized Shared Capital:</label>
 						<div class="col-sm-9">
 							<input type="text" name="comp_share_cap" ng-model="company.share.capital" class="form-control" placeholder="Authorized Shared Capital" required ng-pattern="/^[0-9]{10,10}$/">
@@ -251,7 +251,7 @@
 							<span class="help-block" ng-show="addEmp.comp_share_cap.$error.pattern && addEmp.comp_share_cap.$touched">Invalid Share Capital</span>
 						</div>		
 		          	</div>
-					<div class="form-group has-feedback">
+					<div class="form-group has-feedback" ng-class="{'has-error':addEmp.comp_audit.$touched && addEmp.comp_audit.$invalid}">
 									<label for="pass" class="col-sm-3 control-label">Assign Auditor:</label>
 								<div class="col-sm-9">
 									<select class="form-control" name="comp_audit" ng-model="company.auditor" required>
@@ -281,12 +281,12 @@
                                 <div class="box-body">
 								
                                     
-                                        <div class="col-xs-3">
+                                        <div class="col-xs-3" ng-class="{'has-error':addEmp.comp_bank_name.$touched && addEmp.comp_bank_name.$invalid}">
                                             <input type="text" class="form-control" placeholder="Name of Bank " name="comp_bank_name" ng-model="company.bank.name" required ng-pattern="/^(\D)+$/">
 											<span class="help-block" ng-show="addEmp.comp_bank_name.$error.required && addEmp.comp_bank_name.$touched">Bank name is required</span>
 											<span class="help-block" ng-show="addEmp.comp_bank_name.$error.pattern && addEmp.comp_bank_name.$touched">Bank name is invalid</span>
                                         </div>
-                                        <div class="col-xs-3">
+                                        <div class="col-xs-3" ng-class="{'has-error':addEmp.comp_bank_branch.$touched && addEmp.comp_bank_branch.$invalid}">
                                            <input type="text" class="form-control" placeholder="Name of Branch " name="comp_bank_branch" ng-model="company.bank.branch" required ng-pattern="/^(\D)+$/">
 											<span class="help-block" ng-show="addEmp.comp_bank_branch.$error.required && addEmp.comp_bank_branch.$touched">Branch name is required</span>
 											<span class="help-block" ng-show="addEmp.comp_bank_branch.$error.pattern && addEmp.comp_bank_branch.$touched">Branch name is invalid</span>
@@ -294,17 +294,17 @@
                                         </div>
 										
 										
-                                        <div class="col-xs-2">
+                                        <div class="col-xs-2" ng-class="{'has-error':addEmp.comp_bank_acct.$touched && addEmp.comp_bank_acct.$invalid}">
 											<input type="text" class="form-control" placeholder="Acccount type " name="comp_bank_acct" ng-model="company.bank.accType" required ng-pattern="/^(\D)+$/">
 											<span class="help-block" ng-show="addEmp.comp_bank_acct.$error.required && addEmp.comp_bank_acct.$touched">Acccount type is required</span>
 											<span class="help-block" ng-show="addEmp.comp_bank_acct.$error.pattern && addEmp.comp_bank_acct.$touched">account type is invalid</span>
                                         </div>
-										<div class="col-xs-2">
+										<div class="col-xs-2" ng-class="{'has-error':addEmp.comp_bank_accNo.$touched && addEmp.comp_bank_accNo.$invalid}">
                                             <input type="text" class="form-control" placeholder="Acccount No " name="comp_bank_accNo" ng-model="company.bank.accNo" required ng-pattern="/^[0-9]{10,10}$/">
 											<span class="help-block" ng-show="addEmp.comp_bank_accNo.$error.required && addEmp.comp_bank_accNo.$touched">Acccount no is required</span>
 											<span class="help-block" ng-show="addEmp.comp_bank_accNo.$error.pattern && addEmp.comp_bank_accNo.$touched">account type is invalid</span>
                                         </div>
-										<div class="col-xs-2">
+										<div class="col-xs-2" ng-class="{'has-error':addEmp.comp_bank_ifsc.$touched && addEmp.comp_bank_ifsc.$invalid}">
                                            
 											 <input type="text" class="form-control" placeholder="IFSC " name="comp_bank_ifsc" ng-model="company.bank.ifsc" required ng-pattern="/^[0-9]{10,10}$/">
 											<span class="help-block" ng-show="addEmp.comp_bank_ifsc.$error.required && addEmp.comp_bank_ifsc.$touched">IFSC no is required</span>
@@ -331,33 +331,33 @@
                                     <div class="row">
 										
 										<div class="col-xs-5">
-											<div class="form-group has-feedback">
+											<div class="form-group has-feedback" ng-class="{'has-error':addEmp.cred1_name.$touched && addEmp.cred1_name.$invalid}">
 												<label for="uname" class="col-sm-3 control-label">Primary:</label>
 												<div class="col-sm-9">
-													<input type="text" name="comp_name" ng-model="comapny.name" class="form-control" placeholder="Primary username" required ng-pattern="/^(\D)+$/">
-													<span class="help-block" ng-show="addEmp.comp_name.$error.required && addEmp.comp_name.$touched">User Name is required</span>
-													<span class="help-block" ng-show="addEmp.comp_name.$error.pattern && addEmp.comp_name.$touched">Numeric not allowed</span>
+													<input type="text" name="cred1_name" ng-model="credential1.name" class="form-control" placeholder="Primary username" required ng-pattern="/^(\D)+$/">
+													<span class="help-block" ng-show="addEmp.cred1_name.$error.required && addEmp.cred1_name.$touched">User Name is required</span>
+													<span class="help-block" ng-show="addEmp.cred1_name.$error.pattern && addEmp.cred1_name.$touched">Numeric not allowed</span>
 												</div>		
 											</div>
 												
 										</div>
 										<div class="col-xs-4">
-											<div class="form-group has-feedback">
+											<div class="form-group has-feedback"  ng-class="{'has-error':addEmp.cred1_pass.$touched && addEmp.cred1_pass.$invalid}">
 														<label for="pass" class="col-sm-3 control-label">Password:</label>
 														<div class="col-sm-9">
-													<input type="text" class="form-control" name="comp_pan" ng-model="company.pan" required placeholder="Default Password">
-													<span class="help-block" ng-show="addEmp.comp_pan.$error.required && addEmp.comp_pan.$touched">Password is required</span>
-													<!--<span class="help-block" ng-show="addUser.us_name.$error.pattern && addUser.us_name.$touched">Invalid Password</span>-->
+													<input type="text" class="form-control" name="cred1_pass" ng-model="credential1.pass" required placeholder="Default Password">
+													<span class="help-block" ng-show="addEmp.cred1_pass.$error.required && addEmp.cred1_pass.$touched">Password is required</span>
+													
 												</div>		
 										</div>
 										</div>
 										<div class="col-xs-3">
-											<div class="form-group has-feedback">
+											<div class="form-group has-feedback" ng-class="{'has-error':addEmp.cred1_email.$touched && addEmp.cred1_email.$invalid}">
 												<label for="uname" class="col-sm-3 control-label">Email:</label>
 												<div class="col-sm-9">
-													<input type="text" name="comp_name" ng-model="comapny.name" class="form-control" placeholder="Eamil" required ng-pattern="/^(\D)+$/">
-													<span class="help-block" ng-show="addEmp.comp_name.$error.required && addEmp.comp_name.$touched">User Name is required</span>
-													<span class="help-block" ng-show="addEmp.comp_name.$error.pattern && addEmp.comp_name.$touched">Numeric not allowed</span>
+													<input type="text" name="cred1_email" ng-model="credential1.email" class="form-control" placeholder="Eamil" required ng-pattern="/^(\D)+$/">
+													<span class="help-block" ng-show="addEmp.cred1_email.$error.required && addEmp.cred1_email.$touched">Email is required</span>
+													
 												</div>		
 											</div>
 												
@@ -366,33 +366,33 @@
 									<div class="row">
 										
 										<div class="col-xs-5">
-											<div class="form-group has-feedback">
+											<div class="form-group has-feedback" ng-class="{'has-error':addEmp.cred2_name.$touched && addEmp.cred2_name.$invalid}">
 												<label for="uname" class="col-sm-3 control-label">Secondary:</label>
 												<div class="col-sm-9">
-													<input type="text" name="comp_name" ng-model="comapny.name" class="form-control" placeholder="Secondary username" required ng-pattern="/^(\D)+$/">
-													<span class="help-block" ng-show="addEmp.comp_name.$error.required && addEmp.comp_name.$touched">User Name is required</span>
-													<span class="help-block" ng-show="addEmp.comp_name.$error.pattern && addEmp.comp_name.$touched">Numeric not allowed</span>
+													<input type="text" name="cred2_name" ng-model="credential2.name" class="form-control" placeholder="Secondary username" required ng-pattern="/^(\D)+$/">
+													<span class="help-block" ng-show="addEmp.cred2_name.$error.required && addEmp.cred2_name.$touched">User Name is required</span>
+													<span class="help-block" ng-show="addEmp.cred2_name.$error.pattern && addEmp.cred2_name.$touched">Numeric not allowed</span>
 												</div>		
 											</div>
 												
 										</div>
 										<div class="col-xs-4">
-											<div class="form-group has-feedback">
+											<div class="form-group has-feedback"  ng-class="{'has-error':addEmp.cred2_pass.$touched && addEmp.cred2_pass.$invalid}">
 														<label for="pass" class="col-sm-3 control-label">Password:</label>
 														<div class="col-sm-9">
-													<input type="text" class="form-control" name="comp_pan" ng-model="company.pan" required placeholder="Default Password">
-													<span class="help-block" ng-show="addEmp.comp_pan.$error.required && addEmp.comp_pan.$touched">Password is required</span>
-													<!--<span class="help-block" ng-show="addUser.us_name.$error.pattern && addUser.us_name.$touched">Invalid Password</span>-->
+													<input type="text" class="form-control" name="cred2_pass" ng-model="credential2.pass" required placeholder="Default Password">
+													<span class="help-block" ng-show="addEmp.cred2_pass.$error.required && addEmp.cred2_pass.$touched">Password is required</span>
+													
 												</div>		
 											</div>
 										</div>
 										<div class="col-xs-3">
-											<div class="form-group has-feedback">
+											<div class="form-group has-feedback" ng-class="{'has-error':addEmp.cred2_email.$touched && addEmp.cred2_email.$invalid}">
 												<label for="uname" class="col-sm-3 control-label">Email:</label>
 												<div class="col-sm-9">
-													<input type="text" name="comp_name" ng-model="comapny.name" class="form-control" placeholder="Email" required ng-pattern="/^(\D)+$/">
-													<span class="help-block" ng-show="addEmp.comp_name.$error.required && addEmp.comp_name.$touched">User Name is required</span>
-													<span class="help-block" ng-show="addEmp.comp_name.$error.pattern && addEmp.comp_name.$touched">Numeric not allowed</span>
+													<input type="text" name="cred2_email" ng-model="credential2.email" class="form-control" placeholder="Email" required ng-pattern="/^(\D)+$/">
+													<span class="help-block" ng-show="addEmp.cred2_email.$error.required && addEmp.cred2_email.$touched">Email is required</span>
+													
 												</div>		
 											</div>
 												
