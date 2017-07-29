@@ -18,15 +18,16 @@ app.config(function($stateProvider, $urlRouterProvider) {
     //}
   })
  .state('client-list', {
-    templateUrl: 'views/client_list.html',
+    templateUrl: 'views/client/client_list.html',
     url: '/client-list',
+	controller:'ClientController',
     //resolve: {
       //loggedout: checkLoggedout
     //}
   })
-  .state('client-profile',{
-	  templateUrl:'views/client_profile.html',
-	  url:'/client-profile',
+  .state('user-profile',{
+	  templateUrl:'views/user/user_profile.html',
+	  url:'/user-profile',
 	  //controller:'TrailController',
 	  //resolve:{
 		  //loggedout:checkLoggedout
@@ -34,7 +35,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
 	  
   })
   .state('client-details',{
-	  templateUrl:'views/client_details.html',
+	  templateUrl:'views/client/client_details.html',
 	  url:'/client-details',
 	  //controller:'TrailController',
 	  //resolve:{
@@ -43,7 +44,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
 	  
   })
   .state('client-update',{
-	  templateUrl:'views/client_update.html',
+	  templateUrl:'views/client/client_update.html',
 	  url:'/client-update',
 	  controller:'ClientController',
 	  //resolve:{
@@ -52,7 +53,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
 	  
   })
   .state('new-client', {
-    templateUrl: 'views/new_client.html',
+    templateUrl: 'views/client/new_client.html',
     url: '/new-client',
 	controller:'ClientController',
     //resolve: {
@@ -60,7 +61,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
     //}
   })
   .state('user-list',{
-	  templateUrl:'views/userlist.html',
+	  templateUrl:'views/user/userlist.html',
 	  url:'/user-list',
 	  controller:'Main_Controller'
 	  
@@ -70,21 +71,21 @@ app.config(function($stateProvider, $urlRouterProvider) {
 	  
   } )
   .state('new-user',{
-	  templateUrl:'views/new_user.html',
+	  templateUrl:'views/user/new_user.html',
 	  url:'/new-user',
 	  //resolve:{
 		  //loggedout:checkLoggedout
 	  //}
   })
   .state('user-update',{
-	  templateUrl:'views/user_update.html',
+	  templateUrl:'views/user/user_update.html',
 	  url:'/user-update',
 	  //resolve:{
 		  //loggedout:checkLoggedout
 	  //}
   })
   .state('user-details',{
-	  templateUrl:'views/user_details.html',
+	  templateUrl:'views/user/user_details.html',
 	  url:'/user-details',
 	  //resolve:{
 		  //loggedout:checkLoggedout
@@ -109,7 +110,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
   })
   
   .state('ca-firm',{
-	  templateUrl:'views/details.html',
+	  templateUrl:'views/ca_firm_details.html',
 	  url:'/ca-firm',
 	  //controller:'FirmController',
 	  //resolve:{
@@ -117,7 +118,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
 	  //}
   })
   .state('ca-update',{
-	  templateUrl:'views/firm.html',
+	  templateUrl:'views/ca_update.html',
 	  url:'/ca-update',
 	  controller:'FirmController',
 	  //resolve:{

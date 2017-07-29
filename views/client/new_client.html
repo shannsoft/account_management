@@ -179,26 +179,26 @@
                                 <div class="box-body">
 								
                                     <div class="row" ng-repeat="items in emp.add">
-                                        <div class="col-sm-4" ng-class="{'has-error':addEmp.director_name.$touched && addEmp.director_name.$invalid}">
-                                            <input type="text" class="form-control" placeholder="Name " name="director_name" ng-model="items.name" required ng-pattern="/^(\D)+$/">
-											<span class="help-block" ng-show="addEmp.director_name.$error.required && addEmp.director_name.$touched">Please Enter Director's Name</span>
-											<span class="help-block" ng-show="addEmp.director_name.$error.pattern && addEmp.director_names.$touched">Numeric not allowed</span>
+                                        <div class="col-sm-4" ng-class="{'has-error':addEmp.director_name_{{$index}}.$touched && addEmp.director_name_{{$index}}.$invalid}">
+                                            <input type="text" class="form-control" placeholder="Name " name="director_name_{{$index}}" ng-model="items.name" required ng-pattern="/^(\D)+$/">
+											<span class="help-block" ng-show="addEmp.director_name_{{$index}}.$error.required && addEmp.director_name_{{$index}}.$touched">Please Enter Director's Name</span>
+											<span class="help-block" ng-show="addEmp.director_name_{{$index}}.$error.pattern && addEmp.director_names_{{$index}}.$touched">Numeric not allowed</span>
                                         </div>
-                                        <div class="col-sm-2" ng-class="{'has-error':addEmp.director_desig.$touched && addEmp.director_desig.$invalid}">
-                                            <select class="form-control" name="director_desig" ng-model="items.designation" required >
+                                        <div class="col-sm-2" ng-class="{'has-error':addEmp.director_desig_{{$index}}.$touched && addEmp.director_desig_{{$index}}.$invalid}">
+                                            <select class="form-control" name="director_desig_{{$index}}" ng-model="items.designation" required >
 											<option><i class="fa fa-sort-desc"></i>Designation</option>
 											<option>a</option>
 											<option>b</option>
 											</select>
-											<span class="help-block" ng-show="addEmp.director_desig.$error.required && addEmp.director_desig.$touched">Designation is required</span>
+											<span class="help-block" ng-show="addEmp.director_desig_{{$index}}.$error.required && addEmp.director_desig_{{$index}}.$touched">Designation is required</span>
                                         </div>
-                                        <div class="col-sm-2"  ng-class="{'has-error':addEmp.director_id.$touched && addEmp.director_id.$invalid}">
-                                            <input type="text" class="form-control" placeholder="ID" name="director_id" ng-model="items.id" required>
-											<span class="help-block" ng-show="addEmp.director_id.$error.required && addEmp.director_id.$touched">ID is required</span>
+                                        <div class="col-sm-2"  ng-class="{'has-error':addEmp.director_id_{{$index}}.$touched && addEmp.director_id_{{$index}}.$invalid}">
+                                            <input type="text" class="form-control" placeholder="ID" name="director_id_{{$index}}" ng-model="items.id" required>
+											<span class="help-block" ng-show="addEmp.director_id_{{$index}}.$error.required && addEmp.director_id_{{$index}}.$touched">ID is required</span>
                                         </div>
-										<div class="col-sm-2" ng-class="{'has-error':addEmp.director_pan.$touched && addEmp.director_pan.$invalid}">
-                                            <input type="text" class="form-control" placeholder="PAN" name="director_pan" ng-model="items.pan" required>
-											<span class="help-block" ng-show="addEmp.director_pan.$error.required && addEmp.director_pan.$touched">PAN is required</span>
+										<div class="col-sm-2" ng-class="{'has-error':addEmp.director_pan_{{$index}}.$touched && addEmp.director_pan_{{$index}}.$invalid}">
+                                            <input type="text" class="form-control" placeholder="PAN" name="director_pan_{{$index}}" ng-model="items.pan" required>
+											<span class="help-block" ng-show="addEmp.director_pan_{{$index}}.$error.required && addEmp.director_pan_{{$index}}.$touched">PAN is required</span>
                                         </div>
 										<div class="col-sm-2">
                                            <button type="button"  ng-if="emp.add.length > 1" ng-click="removeEmp($index)" class="btn btn-danger btn-sm">
