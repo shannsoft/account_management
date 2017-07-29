@@ -7,7 +7,7 @@
       <div class="pull-left info">
           <p>Alexander Pierce</p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-        </div>
+      </div>
     </div>
     <ul class="sidebar-menu">
       <li class="header">MAIN NAVIGATION</li>
@@ -15,33 +15,27 @@
         <a href="" ui-sref="dashboard">
           <i class="fa fa-dashboard"></i> <span>Dashboard</span>
         </a>
-		 </li>
-		  <li class="treeview" ng-class="{'active':stateName == 'ca-firm'}">
+		  </li>
+		  <li class="treeview" ng-class="{'active':stateName == 'ca-firm' || stateName == 'ca-update'}">
         <a href="" ui-sref="ca-firm">
-          <i class="fa fa-dashboard"></i> <span>CA firm</span>
+          <i class="fa fa-dashboard"></i> <span>CA Firm</span>
         </a>
-		 </li>
-		 
-		  <li class="treeview" ng-class="{'active':stateName == 'user-list'}">
-		 <a href="" ui-sref="user-list">
+		  </li>
+		  <li class="treeview" ng-class="{'active':stateName == 'user-list' || stateName == 'new-user'}">
+		    <a href="" ui-sref="user-list">
           <i class="fa fa-dashboard"></i> <span>Users List</span>
         </a>
-     
       </li>
-		      <li class="treeview" ng-class="{'active':stateName == 'client-list'}">
-		 <a href="" ui-sref="client-list">
+		  <li class="treeview" ng-class="{'active':stateName == 'client-list' || stateName == 'new-client'}">
+		    <a href="" ui-sref="client-list">
           <i class="fa fa-dashboard"></i> <span>Client List</span>
         </a>
-     
       </li>
-	 
-	  <li class="treeview" ng-class="{'active':stateName == 'trail-balance'}">
-		 <a href="" ui-sref="trail-balance">
+	    <li class="treeview" ng-class="{'active':stateName == 'trail-balance'}">
+		    <a href="" ui-sref="trail-balance">
           <i class="fa fa-dashboard"></i> <span>Trail Balance</span>
         </a>
-     
       </li>
-	  
     </ul>
   </section>
 </aside>

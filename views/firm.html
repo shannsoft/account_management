@@ -1,4 +1,4 @@
-<section class="content-header">
+<section class="content-header m-b-40">
   <h1>
     CA Firm
     <small>Updation</small>
@@ -153,7 +153,7 @@
                                 </div>
                                 <div class="box-body">
 								
-                                    <div class="row" ng-repeat="partners in partner.list">
+                                    <div class="row m-b-10" ng-repeat="partners in partner.list">
                                         <div class="col-sm-4" ng-class="{'has-error':caFirm.part_name_{{$index}}.$touched && caFirm.part_name_{{$index}}.$invalid}">
                                             <input type="text" class="form-control" placeholder="Patrner's Name " name="part_name_{{$index}}" ng-model="partners.name" required ng-pattern="/^(\D)+$/">
 											<span class="help-block" ng-show="caFirm.part_name_{{$index}}.$error.required && caFirm.part_name_{{$index}}.$touched">Please Enter partner's Name</span>
