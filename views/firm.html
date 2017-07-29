@@ -14,7 +14,7 @@
 				 <form class="form-horizontal" name="caFirm">
 						<div class="box-body">
 						<!--row Started-->
-							<div class="row">
+							<div class="row">  
 								<div class="col-xs-6">
 									<div class="form-group has-feedback" ng-class="{'has-error':caFirm.ca_name.$touched && caFirm.ca_name.$invalid}">
 										<label for="uname" class="col-sm-3 control-label">CA Firm Name:</label>
@@ -154,22 +154,22 @@
                                 <div class="box-body">
 								
                                     <div class="row" ng-repeat="partners in partner.list">
-                                        <div class="col-sm-4" ng-class="{'has-error':caFirm.part_name.$touched && caFirm.part_name.$invalid}">
-                                            <input type="text" class="form-control" placeholder="Patrner's Name " name="part_name" ng-model="partners.name" required ng-pattern="/^(\D)+$/">
-											<span class="help-block" ng-show="caFirm.part_name.$error.required && caFirm.part_name.$touched">Please Enter partner's Name</span>
-											<span class="help-block" ng-show="caFirm.part_name.$error.pattern && caFirm.part_name.$touched">Numeric not allowed</span>
+                                        <div class="col-sm-4" ng-class="{'has-error':caFirm.part_name_{{$index}}.$touched && caFirm.part_name_{{$index}}.$invalid}">
+                                            <input type="text" class="form-control" placeholder="Patrner's Name " name="part_name_{{$index}}" ng-model="partners.name" required ng-pattern="/^(\D)+$/">
+											<span class="help-block" ng-show="caFirm.part_name_{{$index}}.$error.required && caFirm.part_name_{{$index}}.$touched">Please Enter partner's Name</span>
+											<span class="help-block" ng-show="caFirm.part_name_{{$index}}.$error.pattern && caFirm.part_name_{{$index}}.$touched">Numeric not allowed</span>
                                         </div>
-                                        <div class="col-sm-3" ng-class="{'has-error':caFirm.part_desig.$touched && caFirm.part_desig.$invalid}">
-                                            <select class="form-control" name="part_desig" ng-model="partners.designation" required >
+                                        <div class="col-sm-3" ng-class="{'has-error':caFirm.part_desig_{{$index}}.$touched && caFirm.part_desig_{{$index}}.$invalid}">
+                                            <select class="form-control" name="part_desig_{{$index}}" ng-model="partners.designation" required >
 											<option value><i class="fa fa-sort-desc"></i>Designation</option>
 											<option value="2">a</option>
 											<option value="3">b</option>
 											</select>
-											<span class="help-block" ng-show="caFirm.part_desig.$error.required && caFirm.part_desig.$touched">Designation is required</span>
+											<span class="help-block" ng-show="caFirm.part_desig_{{$index}}.$error.required && caFirm.part_desig_{{$index}}.$touched">Designation is required</span>
                                         </div>
-                                        <div class="col-sm-3" ng-class="{'has-error':caFirm.part_no.$touched && caFirm.part_no.$invalid}">
-                                            <input type="text" class="form-control" placeholder="Membership Number" name="part_no" ng-model="partners.no" required>
-											<span class="help-block" ng-show="caFirm.part_no.$error.required && caFirm.part_no.$touched">Please provide membership number</span>
+                                        <div class="col-sm-3" ng-class="{'has-error':caFirm.part_no_{{$index}}.$touched && caFirm.part_no_{{$index}}.$invalid}">
+                                            <input type="text" class="form-control" placeholder="Membership Number" name="part_no_{{$index}}" ng-model="partners.no" required>
+											<span class="help-block" ng-show="caFirm.part_no_{{$index}}.$error.required && caFirm.part_no_{{$index}}.$touched">Please provide membership number</span>
                                         </div>
 										
 										<div class="col-sm-2" >

@@ -60,18 +60,17 @@
 						</div>
 						<div class="col-sm-4">
 							<div class="form-group">
-								<span for="lname" class="label-font m-r-5">Manual Entry:</span>
+								<span for="dload" class="label-font m-r-5">Download Template:</span>
 								<label>
-									<input type="checkbox" name="manual_entry" ng-model="entry">
-									<span class="help-block" ng-show="addUser.fname.$error.required && addUser.fname.$touched">First name is required</span>
-									<span class="help-block" ng-show="addUser.fname.$error.pattern && addUser.fname.$touched">Numeric not allowed</span>
+									 <button type="button" class="btn btn-info">
+											<i class="fa fa-download"></i>   Download</button>
 								</label>
 							</div>
 
 						</div>
 						<div class="col-sm-4">
 							<div class="form-group">
-								<button type="submit" class="btn btn-info">submit</button>
+								<button type="submit" class="btn btn-info right">submit</button>
 							</div>
 
 						</div>
@@ -79,7 +78,7 @@
 				</div>
 			<div class="col-sm-12"><hr/></div>
 			
-				 	<div class="clearfix" ng-if="entry">
+				<!-- 	<div class="clearfix" ng-if="entry">
 								<div class="row">
                                     <div class="col-sm-12">
 		                                <div class="box-header">
@@ -126,106 +125,119 @@
 
 
 					</div>
+					-->
 				</form>
 				<div class="clear-fix">
-				<div class="row">
 					<div class="col-sm-12">
-					<div class="box box-info">
-						<div class="box-body">
+					<div class="row">
 						<div class="col-sm-5">
-							<table id="old_trail" class="table table-bordered table-hover">
-								<thead>
-									<tr>
-										<th>Ledger</th>																		
-										<th>Credit</th>
-										<th>Debit</th>											
-										<th>Note Group</th>		
-										<th>Note Ledger</th>											
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<th>Ledger</th>																		
-										<th>Credit</th>
-										<th>Debit</th>											
-										<th>Note Group</th>		
-										<th>Note Ledger</th>											
-									</tr>
-									<tr>
-										<th>Ledger</th>																		
-										<th>Credit</th>
-										<th>Debit</th>											
-										<th>Note Group</th>		
-										<th>Note Ledger</th>											
-									</tr>
-									<tr>
-										<th>Ledger</th>																		
-										<th>Credit</th>
-										<th>Debit</th>											
-										<th>Note Group</th>		
-										<th>Note Ledger</th>											
-									</tr>
-									<tr>
-										<th>Ledger</th>																		
-										<th>Credit</th>
-										<th>Debit</th>											
-										<th>Note Group</th>		
-										<th>Note Ledger</th>											
-									</tr>
-								</tbody>
-							</table>
+							<div class="box box-info">
+								 <div class="box-header with-border">
+									<h3 class="box-title">Old Trail Sheet</h3>
+								 </div>
+								<div class="box-body">									
+										<table id="old_trail" class="table table-bordered table-hover">
+											<thead>
+												<tr>
+													<th>Ledger</th>																		
+													<th colspan="2">Closing Bal</th>
+												<!--	<th>Debit</th>		-->									
+													<th>Note Group</th>		
+													<th>Note Ledger</th>											
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th>Gargee Ents.</th>																		
+													<th></th>
+													<th>560315</th>											
+													<th>SHORT-TERM LOANS AND ADVANCES</th>		
+													<th>Loans and Advances(Assets)</th>											
+												</tr>
+												<tr>
+													<th>Abrar Khan</th>																		
+													<th>27301</th>
+													<th></th>											
+													<th>Sundry Creditors</th>		
+													<th>Equipment Hiring</th>											
+												</tr>
+												<tr>
+													<th>A-1 Fence Pvt Ltd.</th>																		
+													<th></th>
+													<th>4878645387</th>											
+													<th>Steel Material Supplier</th>		
+													<th>Sundry Creditors</th>											
+												</tr>
+												<tr>
+													<th>Aditya Printers</th>																		
+													<th>59875</th>
+													<th></th>											
+													<th>Consumable Supplier</th>		
+													<th>Sundry Creditors</th>											
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-2">
+							</div>
+							<div class="col-sm-5">
+								<div class="box box-info">
+									 <div class="box-header with-border">
+										<h3 class="box-title">New Trail Sheet</h3>
+									 </div>
+									<div class="box-body">										
+											<table id="new_trail" class="table table-bordered table-hover">
+												<thead>
+													<tr>
+														<th>Ledger</th>																		
+														<th colspan="2">Closing Bal</th>
+														<!--<th>Closing Bal</th>-->											
+														<th>Note Group</th>		
+														<th>Note Ledger</th>											
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<th>Gargee Ents.</th>																		
+														<th></th>
+														<th>560315</th>											
+														<th>SHORT-TERM LOANS AND ADVANCES</th>		
+														<th>Loans and Advances(Assets)</th>											
+													</tr>
+													<tr bgcolor="yellow">
+														<th>Abrar Khan</th>																		
+														<th></th>
+														<th>5487424</th>											
+														<th>Sundry Creditors</th>		
+														<th>Equipment Hiring</th>											
+													</tr>
+													<tr>
+														<th>A-1 Fence Pvt Ltd.</th>																		
+														<th>Credit</th>
+														<th>4878645387</th>											
+														<th>Steel Material Supplier</th>		
+														<th>Sundry Creditors</th>											
+													</tr>
+													<tr bgcolor="yellow">
+														<th>Aditya Printers</th>																		
+														<th>44248</th>
+														<th>Debit</th>											
+														<th>Consumable Supplier</th>		
+														<th>Sundry Creditors</th>											
+													</tr>
+												</tbody>
+											</table><!-- new table ends-->
+										</div><!-- new box-body ends-->
+									</div><!-- new box-info ends-->
+								</div> <!-- 2nd col-sm-5 ends-->
+								</div><!-- row ends-->
+							</div><!-- col-10 ends-->
+						
 						</div>
-						<div class="col-sm-2"></div>
-						<div class="col-sm-5">
-							<table id="new_trail" class="table table-bordered table-hover">
-								<thead>
-									<tr>
-										<th>Ledger</th>																		
-										<th>Credit</th>
-										<th>Debit</th>											
-										<th>Note Group</th>		
-										<th>Note Ledger</th>											
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<th>Ledger</th>																		
-										<th>Credit</th>
-										<th>Debit</th>											
-										<th>Note Group</th>		
-										<th>Note Ledger</th>											
-									</tr>
-									<tr>
-										<th>Ledger</th>																		
-										<th>Credit</th>
-										<th>Debit</th>											
-										<th>Note Group</th>		
-										<th>Note Ledger</th>											
-									</tr>
-									<tr>
-										<th>Ledger</th>																		
-										<th>Credit</th>
-										<th>Debit</th>											
-										<th>Note Group</th>		
-										<th>Note Ledger</th>											
-									</tr>
-									<tr>
-										<th>Ledger</th>																		
-										<th>Credit</th>
-										<th>Debit</th>											
-										<th>Note Group</th>		
-										<th>Note Ledger</th>											
-									</tr>
-								</tbody>
-							</table>
-						</div>
-						</div>
-					</div>
-					</div>
-					</div>
-					</div>
-					</div>
-					</div>
+			</div>
 		</div>
+	</div>
 	
 </section>

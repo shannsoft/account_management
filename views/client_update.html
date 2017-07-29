@@ -1,0 +1,459 @@
+<section class="content-header">
+  <h1>
+    Client
+    <small>Control panel</small>
+  </h1>
+</section>
+
+<section class="content">
+	<div class="row">
+		<div class="col-sm-10 col-md-offset-1">
+			<div class="box box-info ">
+		      <div class="box-header with-border">
+		        <h3 class="box-title">Update Client Info</h3>
+		      </div>
+		      <form class="form-horizontal" name="updateClient">
+		        <div class="box-body">
+					<div class="row">
+								<div class="col-xs-6">
+									<div class="form-group has-feedback" ng-class="{'has-error':updateClient.firm_type.$touched && updateClient.firm_type.$invalid}">
+										<label for="lname" class="col-sm-3 control-label">Firm Type:</label>
+										<div class="col-sm-9">
+											<select class="form-control" name="firm_type" ng-model="company.name"required>
+												<option value><i class="fa fa-sort-desc"></i>Enter Firm-type</option>
+												<option value="2">A</option>
+												<option value="3">B</option>
+												<option value="4">C</option>
+											</select>
+											<span class="help-block" ng-show="updateClient.firm_type.$error.required && updateClient.firm_type.$touched">Firm Type is required</span>
+								
+										</div>
+									</div>
+									<div class="form-group has-feedback" ng-class="{'has-error':updateClient.comp_name.$touched && updateClient.comp_name.$invalid}">
+										<label for="uname" class="col-sm-3 control-label">Firm Name:</label>
+										<div class="col-sm-9">
+											<input type="text" name="comp_name" ng-model="comapny.name" class="form-control" placeholder="Farm name" required ng-pattern="/^(\D)+$/">
+											<span class="help-block" ng-show="updateClient.comp_name.$error.required && updateClient.comp_name.$touched">User Name is required</span>
+											<span class="help-block" ng-show="updateClient.comp_name.$error.pattern && updateClient.comp_name.$touched">Numeric not allowed</span>
+										</div>		
+									</div>
+									<div class="form-group has-feedback" ng-class="{'has-error':updateClient.comp_tel.$touched && updateClient.comp_tel.$invalid}">
+												<label for="mobile" class="col-sm-3 control-label">Telephone:</label>
+												<div class="col-sm-9">
+													<input type="tel" name="comp_tel" ng-model="company.telephone" class="form-control" placeholder="Telephone No (optional)"  ng-pattern="/^[0-9]{10,10}$/">
+													<!--<span class="help-block" ng-show="updateClient.comp_mobile.$error.required && updateClient.comp_mobile.$touched">Mobile no is required</span>
+													<span class="help-block" ng-show="updateClient.comp_mobile.$error.pattern && updateClient.comp_mobile.$touched">Invalid Mobile No</span>-->
+												</div>		
+										</div>
+											<div class="form-group has-feedback" ng-class="{'has-error':updateClient.comp_mobile.$touched && updateClient.comp_mobile.$invalid}">
+												<label for="mobile" class="col-sm-3 control-label">Mobile:</label>
+												<div class="col-sm-9">
+													<input type="text" name="comp_mobile" ng-model="company.mobile" class="form-control" placeholder="Mobile No" required ng-pattern="/^[0-9]{10,10}$/">
+													<span class="help-block" ng-show="updateClient.comp_mobile.$error.required && updateClient.comp_mobile.$touched">Mobile no is required</span>
+													<span class="help-block" ng-show="updateClient.comp_mobile.$error.pattern && updateClient.comp_mobile.$touched">Invalid Mobile No</span>
+												</div>		
+											</div>
+		
+								</div>
+						<div class="col-xs-6">
+								<div class="form-group has-feedback" ng-class="{'has-error':updateClient.date_incorp.$touched && updateClient.date_incorp.$invalid}">
+										<label for="lname" class="col-sm-3 control-label">Incorporation Date:</label>
+										<div class="col-sm-9">
+											 <input type="date" name="date_incorp" ng-model="company.date" class="form-control" placeholder="Date of incorporation" required>
+											<span class="help-block" ng-show="updateClient.date_incorp.$error.required && updateClient.date_incorp.$touched">Incorporation date is required</span>
+											
+										</div>	
+									</div>
+									<div class="form-group has-feedback" ng-class="{'has-error':updateClient.comp_gst.$touched && updateClient.comp_gst.$invalid}">
+												<label for="pass" class="col-sm-3 control-label">GST No:</label>
+											<div class="col-sm-9">
+											<input type="text" class="form-control" name="comp_gst" ng-model="company.gst" required placeholder="Gst No">
+												
+												<span class="help-block" ng-show="updateClient.comp_gst.$error.required && updateClient.comp_gst.$touched">gst is required</span>
+								<!--<span class="help-block" ng-show="addUser.us_name.$error.pattern && addUser.us_name.$touched">Invalid Password</span>-->
+							</div>		
+		          	</div>
+							<div class="form-group has-feedback" ng-class="{'has-error':updateClient.comp_pan.$touched && updateClient.comp_pan.$invalid}">
+												<label for="pass" class="col-sm-3 control-label">PAN No:</label>
+												<div class="col-sm-9">
+													<input type="text" class="form-control" name="comp_pan" ng-model="company.pan" required placeholder="Pan no of Firm">
+													<span class="help-block" ng-show="updateClient.comp_pan.$error.required && updateClient.comp_pan.$touched">Password is required</span>
+													<!--<span class="help-block" ng-show="addUser.us_name.$error.pattern && addUser.us_name.$touched">Invalid Password</span>-->
+												</div>		
+										</div>
+										<div class="form-group has-feedback" ng-class="{'has-error':updateClient.comp_tan.$touched && updateClient.comp_tan.$invalid}">
+														<label for="pass" class="col-sm-3 control-label">TAN No:</label>
+													<div class="col-sm-9">
+														<input type="text" class="form-control" name="comp_tan" ng-model="company.tan" required placeholder="TAN No">
+														<span class="help-block" ng-show="updateClient.comp_tan.$error.required && updateClient.comp_tan.$touched">Tan no is required</span>
+													<!--	<span class="help-block" ng-show="addUser.us_name.$error.pattern && addUser.us_name.$touched">Invalid Password</span>-->
+													</div>		
+											</div>
+								
+								
+								
+								
+								
+								</div>
+				
+				
+				
+				
+				
+					</div>
+				<!--row started-->
+				<div class="row ">
+				<div class="col-sm-12">
+						<div class="box box-success">
+                                <div class="box-header">
+                                    <h3 class="box-title">Regd. Office Address</h3>
+                                </div>
+                                <div class="box-body">
+									
+                                   
+                                        <div class="col-xs-3" ng-class="{'has-error':updateClient.comp_country.$touched && updateClient.comp_country.$invalid}">
+                                            <input type="text" class="form-control" placeholder="Country " name="comp_country" ng-model="company.country" required>
+											<span class="help-block" ng-show="updateClient.comp_country.$error.required && updateClient.comp_country.$touched">Please Enter Country</span>
+                                        </div>
+                                        <div class="col-xs-3" ng-class="{'has-error':updateClient.comp_state.$touched && updateClient.comp_state.$invalid}">
+                                            <input type="text" class="form-control" placeholder="State" name="comp_state" ng-model="company.state" required>
+											<span class="help-block" ng-show="updateClient.comp_state.$error.required && updateClient.comp_state.$touched">Please Enter State</span>
+                                        </div>
+									
+										
+                                        <div class="col-xs-2" ng-class="{'has-error':updateClient.comp_city.$touched && updateClient.comp_city.$invalid}">
+                                            <input type="text" class="form-control" placeholder="City" name="comp_city" ng-model="company.city" required>
+											<span class="help-block" ng-show="updateClient.comp_city.$error.required && updateClient.comp_city.$touched">Please Enter City</span>
+                                        </div>
+										<div class="col-xs-2" ng-class="{'has-error':updateClient.comp_plot.$touched && updateClient.comp_plot.$invalid}">
+                                            <input type="text" class="form-control" placeholder="Plot No/Lane" name="comp_plot" ng-model="company.plot" required>
+											<span class="help-block" ng-show="updateClient.comp_plot.$error.required && updateClient.comp_plot.$touched">Please Enter Plot No</span>
+                                        </div>
+										<div class="col-xs-2" ng-class="{'has-error':updateClient.comp_pin.$touched && updateClient.comp_pin.$invalid}">
+                                            <input type="text" class="form-control" placeholder="Pin" name="comp_pin" ng-model="company.pin" required>
+											<span class="help-block" ng-show="updateClient.comp_pin.$error.required && updateClient.comp_pin.$touched">Please Enter Pin</span>
+											
+                                        </div>
+                                   
+                                </div>
+				</div>
+				
+				
+						<div class="box box-success">
+                                <div class="box-header">
+                                    <h3 class="box-title">Principal place of business Address</h3>
+                                </div>
+                                <div class="box-body">
+									
+                                   
+                                        <div class="col-xs-3" ng-class="{'has-error':updateClient.comp_country1.$touched && updateClient.comp_country1.$invalid}">
+                                            <input type="text" class="form-control" placeholder="Country " name="comp_country1" ng-model="company.country1" required>
+											<span class="help-block" ng-show="updateClient.comp_country1.$error.required && updateClient.comp_country1.$touched">Please Enter Country</span>
+                                        </div>
+                                        <div class="col-xs-3" ng-class="{'has-error':updateClient.comp_state1.$touched && updateClient.comp_state1.$invalid}">
+                                            <input type="text" class="form-control" placeholder="State" name="comp_state1" ng-model="company.state1" required>
+											<span class="help-block" ng-show="updateClient.comp_state1.$error.required && updateClient.comp_state1.$touched">Please Enter State</span>
+                                        </div>
+									
+										
+                                        <div class="col-xs-2" ng-class="{'has-error':updateClient.comp_city1.$touched && updateClient.comp_city1.$invalid}">
+                                            <input type="text" class="form-control" placeholder="City" name="comp_city1" ng-model="company.city1" required>
+											<span class="help-block" ng-show="updateClient.comp_city1.$error.required && updateClient.comp_city1.$touched">Please Enter City</span>
+                                        </div>
+										<div class="col-xs-2" ng-class="{'has-error':updateClient.comp_plot1.$touched && updateClient.comp_plot1.$invalid}">
+                                            <input type="text" class="form-control" placeholder="Plot No/Lane" name="comp_plot1" ng-model="company.plot1" required>
+											<span class="help-block" ng-show="updateClient.comp_plot1.$error.required && updateClient.comp_plot1.$touched">Please Enter Plot No</span>
+                                        </div>
+										<div class="col-xs-2"  ng-class="{'has-error':updateClient.comp_pin1.$touched && updateClient.comp_pin1.$invalid}">
+                                            <input type="text" class="form-control" placeholder="Pin" name="comp_pin1" ng-model="company.pin1" required>
+											<span class="help-block" ng-show="updateClient.comp_pin1.$error.required && updateClient.comp_pin1.$touched">Please Enter Pin</span>
+											
+                                        </div>
+                                 
+                                </div>
+							</div>
+					<div class="box box-info">
+                                <div class="box-header">
+                                    <h3 class="box-title">Directors details</h3>
+                                </div>
+                                <div class="box-body">
+								
+                                    <div class="row" ng-repeat="directors in client_update.director">
+                                        <div class="col-sm-4" ng-class="{'has-error':updateClient.director_name_{{$index}}.$touched && updateClient.director_name_{{$index}}.$invalid}">
+                                            <input type="text" class="form-control" placeholder="Name " name="director_name_{{$index}}" ng-model="directors.name" required ng-pattern="/^(\D)+$/">
+											<span class="help-block" ng-show="updateClient.director_name_{{$index}}.$error.required && updateClient.director_name_{{$index}}.$touched">Please Enter Director's Name</span>
+											<span class="help-block" ng-show="updateClient.director_name_{{$index}}.$error.pattern && updateClient.director_name_{{$index}}.$touched">Numeric not allowed</span>
+                                        </div>
+                                        <div class="col-sm-2" ng-class="{'has-error':updateClient.director_desig_{{$index}}.$touched && updateClient.director_desig_{{$index}}.$invalid}">
+                                            <select class="form-control" name="director_desig_{{$index}}" ng-model="directors.designation" required >
+											<option value><i class="fa fa-sort-desc"></i>Designation</option>
+											<option value="2">a</option>
+											<option value="3">b</option>
+											</select>
+											<span class="help-block" ng-show="updateClient.director_desig_{{$index}}.$error.required && updateClient.director_desig_{{$index}}.$touched">Designation is required</span>
+                                        </div>
+                                        <div class="col-sm-2"  ng-class="{'has-error':updateClient.director_id_{{$index}}.$touched && updateClient.director_id_{{$index}}.$invalid}">
+                                            <input type="text" class="form-control" placeholder="ID" name="director_id_{{$index}}" ng-model="directors.id" required>
+											<span class="help-block" ng-show="updateClient.director_id_{{$index}}.$error.required && updateClient.director_id_{{$index}}.$touched">ID is required</span>
+                                        </div>
+										<div class="col-sm-2" ng-class="{'has-error':updateClient.director_pan_{{$index}}.$touched && updateClient.director_pan_{{$index}}.$invalid}">
+                                            <input type="text" class="form-control" placeholder="PAN" name="director_pan_{{$index}}" ng-model="directors.pan" required>
+											<span class="help-block" ng-show="updateClient.director_pan_{{$index}}.$error.required && updateClient.director_pan_{{$index}}.$touched">PAN is required</span>
+                                        </div>
+										<div class="col-sm-2">
+                                           <button type="button"  ng-if="client_update.director.length > 1" ng-click="removeDirector($index)" class="btn btn-danger btn-sm">
+	                  							<i class="fa fa-minus"></i>
+	                  						</button>
+                                           <button type="button" ng-if="$last" ng-click="updateDirector()" class="btn btn-info btn-sm">
+	                  							<i class="fa fa-plus"></i>
+	                  						</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+				
+				
+				
+				
+				</div>
+		</div>
+				<!--row ended-->
+				<!--row started-->
+				<div class="row"> 
+					<div class="col-xs-6">
+								 <div class="form-group has-feedback" ng-class="{'has-error':updateClient.acc_ofc.$touched && updateClient.acc_ofc.$invalid}">
+									<label for="mobile" class="col-sm-3 control-label">Accessing Office:</label>
+									<div class="col-sm-9">
+										<input type="text" name="acc_ofc" ng-model="company.ofc" class="form-control" placeholder="Accessing Office" required >
+										<span class="help-block" ng-show="updateClient.acc_ofc.$error.required && updateClient.acc_ofc.$touched">Accessing Office is required</span>
+										<!--<span class="help-block" ng-show="updateClient.acc_ofc.$error.pattern && updateClient.acc_ofc.$touched">Invalid Mobile No</span>-->
+									</div>		
+								</div>
+								  <div class="form-group has-feedback" ng-class="{'has-error':updateClient.paid_cap.$touched && updateClient.paid_cap.$invalid}">
+													<label for="mobile" class="col-sm-3 control-label">Paid Up Share Capital:</label>
+													<div class="col-sm-9">
+														<input type="text" name="paid_cap" ng-model="company.capital" class="form-control" placeholder="Paid Up Share Capital" required ng-pattern="/^[0-9]{10,10}$/">
+														<span class="help-block" ng-show="updateClient.paid_cap.$error.required && updateClient.paid_cap.$touched">Capital is required</span>
+														<span class="help-block" ng-show="updateClient.paid_cap.$error.pattern && updateClient.paid_cap.$touched">Invalid amount</span>
+													</div>		
+								   </div>
+					
+					</div>
+
+					<div class="col-xs-6">
+							
+					 <div class="form-group has-feedback"  ng-class="{'has-error':updateClient.comp_share_cap.$touched && updateClient.comp_share_cap.$invalid}">
+			          	<label for="mobile" class="col-sm-3 control-label">Authorized Shared Capital:</label>
+						<div class="col-sm-9">
+							<input type="text" name="comp_share_cap" ng-model="company.share.capital" class="form-control" placeholder="Authorized Shared Capital" required ng-pattern="/^[0-9]{10,10}$/">
+							<span class="help-block" ng-show="updateClient.comp_share_cap.$error.required && updateClient.comp_share_cap.$touched">Authorized shared capital is required</span>
+							<span class="help-block" ng-show="updateClient.comp_share_cap.$error.pattern && updateClient.comp_share_cap.$touched">Invalid Share Capital</span>
+						</div>		
+		          	</div>
+					<div class="form-group has-feedback" ng-class="{'has-error':updateClient.comp_audit.$touched && updateClient.comp_audit.$invalid}">
+									<label for="pass" class="col-sm-3 control-label">Assign Auditor:</label>
+								<div class="col-sm-9">
+									<select class="form-control" name="comp_audit" ng-model="company.auditor" required>
+											<option value><i class="fa fa-sort-desc"></i>assign an Auditor</option>
+											<option value>A</option>
+											<option value="2">B</option>
+											<option value="3">C</option>
+									</select>
+									<span class="help-block" ng-show="updateClient.comp_audit.$error.required && updateClient.comp_audit.$touched">Please assign an auditor</span>
+									
+								</div>		
+						</div>
+					
+					
+					</div>
+				
+				
+				
+				</div>
+				<!-- row ended -->
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="box box-success">
+                                <div class="box-header">
+                                    <h3 class="box-title">Bank details</h3>
+                                </div>
+                                <div class="box-body">
+								
+                                    
+                                        <div class="col-xs-3" ng-class="{'has-error':updateClient.comp_bank_name.$touched && updateClient.comp_bank_name.$invalid}">
+                                            <input type="text" class="form-control" placeholder="Name of Bank " name="comp_bank_name" ng-model="company.bank.name" required ng-pattern="/^(\D)+$/">
+											<span class="help-block" ng-show="updateClient.comp_bank_name.$error.required && updateClient.comp_bank_name.$touched">Bank name is required</span>
+											<span class="help-block" ng-show="updateClient.comp_bank_name.$error.pattern && updateClient.comp_bank_name.$touched">Bank name is invalid</span>
+                                        </div>
+                                        <div class="col-xs-3" ng-class="{'has-error':updateClient.comp_bank_branch.$touched && updateClient.comp_bank_branch.$invalid}">
+                                           <input type="text" class="form-control" placeholder="Name of Branch " name="comp_bank_branch" ng-model="company.bank.branch" required ng-pattern="/^(\D)+$/">
+											<span class="help-block" ng-show="updateClient.comp_bank_branch.$error.required && updateClient.comp_bank_branch.$touched">Branch name is required</span>
+											<span class="help-block" ng-show="updateClient.comp_bank_branch.$error.pattern && updateClient.comp_bank_branch.$touched">Branch name is invalid</span>
+											
+                                        </div>
+										
+										
+                                        <div class="col-xs-2" ng-class="{'has-error':updateClient.comp_bank_acct.$touched && updateClient.comp_bank_acct.$invalid}">
+											<input type="text" class="form-control" placeholder="Acccount type " name="comp_bank_acct" ng-model="company.bank.accType" required ng-pattern="/^(\D)+$/">
+											<span class="help-block" ng-show="updateClient.comp_bank_acct.$error.required && updateClient.comp_bank_acct.$touched">Acccount type is required</span>
+											<span class="help-block" ng-show="updateClient.comp_bank_acct.$error.pattern && updateClient.comp_bank_acct.$touched">account type is invalid</span>
+                                        </div>
+										<div class="col-xs-2" ng-class="{'has-error':updateClient.comp_bank_accNo.$touched && updateClient.comp_bank_accNo.$invalid}">
+                                            <input type="text" class="form-control" placeholder="Acccount No " name="comp_bank_accNo" ng-model="company.bank.accNo" required ng-pattern="/^[0-9]{10,10}$/">
+											<span class="help-block" ng-show="updateClient.comp_bank_accNo.$error.required && updateClient.comp_bank_accNo.$touched">Acccount no is required</span>
+											<span class="help-block" ng-show="updateClient.comp_bank_accNo.$error.pattern && updateClient.comp_bank_accNo.$touched">account type is invalid</span>
+                                        </div>
+										<div class="col-xs-2" ng-class="{'has-error':updateClient.comp_bank_ifsc.$touched && updateClient.comp_bank_ifsc.$invalid}">
+                                           
+											 <input type="text" class="form-control" placeholder="IFSC " name="comp_bank_ifsc" ng-model="company.bank.ifsc" required ng-pattern="/^[0-9]{10,10}$/">
+											<span class="help-block" ng-show="updateClient.comp_bank_ifsc.$error.required && updateClient.comp_bank_ifsc.$touched">IFSC no is required</span>
+											<span class="help-block" ng-show="updateClient.comp_bank_ifsc.$error.pattern && updateClient.comp_bank_ifsc.$touched">IFSC is invalid</span>
+                                        </div>
+                                    
+                                </div>
+						</div>
+					
+					
+					</div>
+				</div>
+				<!--row ended-->
+				
+				<!-- row ended-->
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="box box-success">
+                                <div class="box-header">
+                                    <h3 class="box-title">Create credentials for Client side access</h3>
+                                </div>
+                                <div class="box-body">
+								
+                                    <div class="row">
+										
+										<div class="col-xs-5">
+											<div class="form-group has-feedback" ng-class="{'has-error':updateClient.cred1_name.$touched && updateClient.cred1_name.$invalid}">
+												<label for="uname" class="col-sm-3 control-label">Primary:</label>
+												<div class="col-sm-9">
+													<input type="text" name="cred1_name" ng-model="credential1.name" class="form-control" placeholder="Primary username" required ng-pattern="/^(\D)+$/">
+													<span class="help-block" ng-show="updateClient.cred1_name.$error.required && updateClient.cred1_name.$touched">User Name is required</span>
+													<span class="help-block" ng-show="updateClient.cred1_name.$error.pattern && updateClient.cred1_name.$touched">Numeric not allowed</span>
+												</div>		
+											</div>
+												
+										</div>
+										<div class="col-xs-4">
+											<div class="form-group has-feedback"  ng-class="{'has-error':updateClient.cred1_pass.$touched && updateClient.cred1_pass.$invalid}">
+														<label for="pass" class="col-sm-3 control-label">Password:</label>
+														<div class="col-sm-9">
+													<input type="text" class="form-control" name="cred1_pass" ng-model="credential1.pass" required placeholder="Default Password">
+													<span class="help-block" ng-show="updateClient.cred1_pass.$error.required && updateClient.cred1_pass.$touched">Password is required</span>
+													
+												</div>		
+										</div>
+										</div>
+										<div class="col-xs-3">
+											<div class="form-group has-feedback" ng-class="{'has-error':updateClient.cred1_email.$touched && updateClient.cred1_email.$invalid}">
+												<label for="uname" class="col-sm-3 control-label">Email:</label>
+												<div class="col-sm-9">
+													<input type="text" name="cred1_email" ng-model="credential1.email" class="form-control" placeholder="Eamil" required ng-pattern="/^(\D)+$/">
+													<span class="help-block" ng-show="updateClient.cred1_email.$error.required && updateClient.cred1_email.$touched">Email is required</span>
+													
+												</div>		
+											</div>
+												
+										</div>
+									</div>
+									<div class="row">
+										
+										<div class="col-xs-5">
+											<div class="form-group has-feedback" ng-class="{'has-error':updateClient.cred2_name.$touched && updateClient.cred2_name.$invalid}">
+												<label for="uname" class="col-sm-3 control-label">Secondary:</label>
+												<div class="col-sm-9">
+													<input type="text" name="cred2_name" ng-model="credential2.name" class="form-control" placeholder="Secondary username" required ng-pattern="/^(\D)+$/">
+													<span class="help-block" ng-show="updateClient.cred2_name.$error.required && updateClient.cred2_name.$touched">User Name is required</span>
+													<span class="help-block" ng-show="updateClient.cred2_name.$error.pattern && updateClient.cred2_name.$touched">Numeric not allowed</span>
+												</div>		
+											</div>
+												
+										</div>
+										<div class="col-xs-4">
+											<div class="form-group has-feedback"  ng-class="{'has-error':updateClient.cred2_pass.$touched && updateClient.cred2_pass.$invalid}">
+														<label for="pass" class="col-sm-3 control-label">Password:</label>
+														<div class="col-sm-9">
+													<input type="text" class="form-control" name="cred2_pass" ng-model="credential2.pass" required placeholder="Default Password">
+													<span class="help-block" ng-show="updateClient.cred2_pass.$error.required && updateClient.cred2_pass.$touched">Password is required</span>
+													
+												</div>		
+											</div>
+										</div>
+										<div class="col-xs-3">
+											<div class="form-group has-feedback" ng-class="{'has-error':updateClient.cred2_email.$touched && updateClient.cred2_email.$invalid}">
+												<label for="uname" class="col-sm-3 control-label">Email:</label>
+												<div class="col-sm-9">
+													<input type="text" name="cred2_email" ng-model="credential2.email" class="form-control" placeholder="Email" required ng-pattern="/^(\D)+$/">
+													<span class="help-block" ng-show="updateClient.cred2_email.$error.required && updateClient.cred2_email.$touched">Email is required</span>
+													
+												</div>		
+											</div>
+												
+										</div>
+									
+									
+									
+									</div>
+                                        
+                                       
+										
+                                    
+                                </div>
+						</div>
+					
+					
+					</div>
+				</div>
+			<!-- row ended-->
+				
+
+				<!--	<div class="form-group has-feedback">
+								<label for="pass" class="col-sm-3 control-label">CA Firm  Name:</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" placeholder="CA Firm  Name" name="comp_firm_name" ng-model="company.firm" required ng-pattern="/^(\D)+$/">
+								<span class="help-block" ng-show="updateClient.comp_firm_name.$error.required && updateClient.comp_firm_name.$touched">CA Firm Name is required</span>
+								<span class="help-block" ng-show="updateClient.comp_firm_name.$error.pattern && updateClient.comp_firm_name.$touched">Numeric is not allowed</span>
+							</div>		
+		          	</div>
+					<div class="form-group has-feedback">
+								<label for="pass" class="col-sm-3 control-label">CA Firm Type:</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" placeholder="CA Firm Type" name="comp_firm_type" ng-model="company.ftype" required>
+								<span class="help-block" ng-show="updateClient.comp_firm_type.$error.required && updateClient.comp_firm_type.$touched">CA Farm type is required</span>
+								<!--<span class="help-block" ng-show="addUser.us_name.$error.pattern && addUser.us_name.$touched">Invalid Password</span>
+							</div>		
+		          	</div>-->
+
+				 <div class="row">
+                    <div class="col-xs-12">
+                        <label>
+                            <input type="checkbox">
+                            I agree to the
+                            <a href="#">terms</a>
+                        </label>
+                    </div>
+                   
+                </div>
+			</div>
+					<div class="box-footer">
+					  <button type="submit" class="btn btn-default"  ui-sref="client-list">Back</button>
+					  <button type="submit" class="btn btn-info pull-right">Submit</button>
+					</div>
+				
+		      </form>
+			  </div>
+		    </div>
+		</div>
+	
+</section>
+
+
+
+

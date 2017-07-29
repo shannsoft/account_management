@@ -4996,3 +4996,6 @@ table.text-center th {
 .m-b-10{
   margin-bottom: 10px;
 }
+.ng-table-pager{
+	margin-top:10px;
+}

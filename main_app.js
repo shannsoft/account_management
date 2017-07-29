@@ -17,17 +17,44 @@ app.config(function($stateProvider, $urlRouterProvider) {
       //loggedout: checkLoggedout
     //}
   })
- .state('companylist', {
-    templateUrl: 'views/companylist.html',
-    url: '/companylist',
+ .state('client-list', {
+    templateUrl: 'views/client_list.html',
+    url: '/client-list',
     //resolve: {
       //loggedout: checkLoggedout
     //}
   })
-  .state('newemployee', {
-    templateUrl: 'views/newemployee.html',
-    url: '/newemployee',
-	controller:'EmployeeController',
+  .state('client-profile',{
+	  templateUrl:'views/client_profile.html',
+	  url:'/client-profile',
+	  //controller:'TrailController',
+	  //resolve:{
+		  //loggedout:checkLoggedout
+	  //}
+	  
+  })
+  .state('client-details',{
+	  templateUrl:'views/client_details.html',
+	  url:'/client-details',
+	  //controller:'TrailController',
+	  //resolve:{
+		  //loggedout:checkLoggedout
+	  //}
+	  
+  })
+  .state('client-update',{
+	  templateUrl:'views/client_update.html',
+	  url:'/client-update',
+	  controller:'ClientController',
+	  //resolve:{
+		  //loggedout:checkLoggedout
+	  //}
+	  
+  })
+  .state('new-client', {
+    templateUrl: 'views/new_client.html',
+    url: '/new-client',
+	controller:'ClientController',
     //resolve: {
       //loggedout: checkLoggedout
     //}
@@ -35,14 +62,30 @@ app.config(function($stateProvider, $urlRouterProvider) {
   .state('user-list',{
 	  templateUrl:'views/userlist.html',
 	  url:'/user-list',
+	  controller:'Main_Controller'
+	  
 	  //resolve:{
 		  //loggedout:checkLoggedout
 	  //}
 	  
   } )
-  .state('newuser',{
-	  templateUrl:'views/newuser.html',
-	  url:'/newuser',
+  .state('new-user',{
+	  templateUrl:'views/new_user.html',
+	  url:'/new-user',
+	  //resolve:{
+		  //loggedout:checkLoggedout
+	  //}
+  })
+  .state('user-update',{
+	  templateUrl:'views/user_update.html',
+	  url:'/user-update',
+	  //resolve:{
+		  //loggedout:checkLoggedout
+	  //}
+  })
+  .state('user-details',{
+	  templateUrl:'views/user_details.html',
+	  url:'/user-details',
 	  //resolve:{
 		  //loggedout:checkLoggedout
 	  //}
@@ -64,15 +107,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
 	  //}
   
   })
-  .state('profile',{
-	  templateUrl:'views/profile.html',
-	  url:'/profile',
-	  //controller:'TrailController',
-	  //resolve:{
-		  //loggedout:checkLoggedout
-	  //}
-	  
-  })
+  
   .state('ca-firm',{
 	  templateUrl:'views/details.html',
 	  url:'/ca-firm',
