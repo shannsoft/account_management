@@ -5,7 +5,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
   .state('login', {
       templateUrl: 'views/login.html',
       url: '/login',
-	  controller:'LoginCtrl',
+	   controller:'LoginCtrl',
       //resolve: {
         //loggedout: checkLoggedin
       //}
