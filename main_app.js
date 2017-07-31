@@ -1,11 +1,11 @@
 var app = angular.module("acc_app", ['ui.router', 'ui.bootstrap', 'ngResource', 'ngStorage', 'ngAnimate','datePicker','ngTable']);
 app.config(function($stateProvider, $urlRouterProvider) {
-  $urlRouterProvider.otherwise('/dashboard');
+  $urlRouterProvider.otherwise('/login');
   $stateProvider
   .state('login', {
       templateUrl: 'views/login.html',
       url: '/login',
-	  //controller:'LoginCtrl'
+	  controller:'LoginCtrl',
       //resolve: {
         //loggedout: checkLoggedin
       //}
