@@ -1,7 +1,8 @@
 app.controller('LoginCtrl',function($scope,LoginService,$state,$window){
 	$scope.user = {};
 	$scope.userLogin = function(){
-		 LoginService.loginUser($scope.user).then(function(response){
+		 LoginService.jsonLogin($scope.user).then(function(response){
+		 	console.log(response);
 		 	$state.go('dashboard');
 		 },function(error){
 		 	var alertPopup = $window.alert({

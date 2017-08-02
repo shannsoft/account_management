@@ -1,0 +1,20 @@
+{
+	"user":[
+		{
+			"first_name":"santosh",
+			"last_name":"majhi",
+			"email":"santosh@gmail.com",
+			"mobile":"1234567890",
+			"user_name":"santosh99",
+			"password":"123456"
+		},
+		{
+			"first_name":"Subhra",
+			"last_name":"majhi",
+			"email":"subhra@gmail.com",
+			"mobile":"0987654321",
+			"user_name":"subhra",
+			"password":"123456"
+		}
+	]
+}
