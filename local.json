@@ -6,7 +6,8 @@
 			"email":"santosh@gmail.com",
 			"mobile":"1234567890",
 			"user_name":"santosh99",
-			"password":"123456"
+			"password":"123456",
+			"user_role":"enterer"
 		},
 		{
 			"first_name":"Subhra",
@@ -14,7 +15,32 @@
 			"email":"subhra@gmail.com",
 			"mobile":"0987654321",
 			"user_name":"subhra",
-			"password":"123456"
+			"password":"123456",
+			"user_role":"verifier"
 		}
+	],
+
+	"client":[
+				{
+					"firm_name":"BBM & co",
+					"firm_type":"Chartard Accountants",
+					"date_inc" :"20-7-2017",
+			             "gst" :"5744877",
+					"is_active":false
+				},
+				{
+					"firm_name":"Go Apps Solutions",
+					"firm_type":"Software",
+					"date_inc" :"20-7-2017",
+			             "gst" :"5744877",
+					"is_active":true
+				},
+				{
+					"firm_name":"BBM & co",
+					"firm_type":"Chartard Accountants",
+					"date_inc" :"20-7-2017",
+			             "gst" :"5744877",
+					"is_active":true
+				}
 	]
 }

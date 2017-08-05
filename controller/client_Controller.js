@@ -1,4 +1,4 @@
-app.controller('ClientController',function($scope,$rootScope,Util,$uibModal,$stateParams,NgTableParams){
+app.controller('ClientController',function($scope,$rootScope,Util,$uibModal,$stateParams,NgTableParams,ClientService){
 	
 	$scope.emp = {};	
 	$scope.emp.add=[
@@ -9,7 +9,7 @@ app.controller('ClientController',function($scope,$rootScope,Util,$uibModal,$sta
 			   'pan' :'',
 	    	
 	}
-	];	
+];	
 	$scope.removeEmp=function($index){
 		$scope.emp.add.splice($index,1);
 		
@@ -24,10 +24,8 @@ app.controller('ClientController',function($scope,$rootScope,Util,$uibModal,$sta
 		'designation':'',
 		         'id':'',
 			   'pan' :'',
-	    	
-	    	
 	}
-	];	
+];	
 	$scope.removeDirector=function($index){
 		$scope.client_update.director.splice($index,1);
 		
@@ -37,7 +35,7 @@ app.controller('ClientController',function($scope,$rootScope,Util,$uibModal,$sta
 		$scope.client_update.director.push(obj);
 	}
 	
-	$scope.client_list=[
+	/*$scope.client_list=[
 	{
 		"firm_name":"BBM & co",
 		"firm_type":"Chartard Accountants",
@@ -80,6 +78,19 @@ app.controller('ClientController',function($scope,$rootScope,Util,$uibModal,$sta
 	$scope.clientData = new NgTableParams();
 	$scope.clientData.settings({dataset:$scope.client_list})
 	
-	
+	*/
+	$scope.clientList={};
+    $scope.getClientList = function(){
+    		ClientService.clientList().then(function(response){
+    			console.log(response);
+    			$scope.clientList=response.data.client;
+    			$scope.clientData = new NgTableParams();
+    			$scope.clientData.settings({
+    				dataset : $scope.clientList
+    			})
+    		},function(error){
+    			 $rootScope.showPreloader = false;
+    		})
+    }
 	
 })

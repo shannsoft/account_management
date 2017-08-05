@@ -24,9 +24,9 @@
     <script src="dist/js/date-picker/moment.js"></script>
 
     <script src="main_app.js"></script>
-
+  	<script src="local.json"></script>
     <script src="directive/directive.js"></script>
-
+        <script src="controller/user_controller.js"></script>
     <script src="controller/main_controller.js"></script>
 	 <script src="controller/trail.js"></script>
 	 <script src="controller/client_Controller.js"></script>
@@ -36,17 +36,17 @@
     <script src="filter.js"></script>
   
   </head>
-  <body class="hold-transition skin-green sidebar-mini" ng-class="{'login-page':!is_loggedin}" ng-controller="Main_Controller" ng-init="getUseDetails()">
+  <body class="hold-transition skin-green sidebar-mini" ng-class="{'login-page':!is_loggedin}" ng-controller="Main_Controller" ng-init="getUserDetails()">
     <div ng-repeat="alert in alerts" class="alert alert-{{alert.type}}">
     {{alert.msg}}
   </div>
     <div id="preloader" ng-if="showPreloader">
       <div id="status"><i class="fa fa-spinner fa-spin"></i></div>
     </div>
-    <div class="" ng-if="is_loggedin">
+    <div class="" ng-if="!is_loggedin">
       <div ui-view></div>
     </div>
-    <div class="" ng-if="!is_loggedin">
+    <div class="" ng-if="is_loggedin">
       <div class="wrapper" >
         <div ng-include="'views/header.html'"></div>
         <div ng-include="'views/sidebar.html'"></div>

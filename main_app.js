@@ -5,10 +5,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
   .state('login', {
       templateUrl: 'views/login.html',
       url: '/login',
-	   controller:'LoginCtrl',
-      //resolve: {
-        //loggedout: checkLoggedin
-      //}
+	    controller:'LoginCtrl',
+      resolve: {
+        loggedout: checkLoggedin
+      }
   })
   .state('dashboard', {
     templateUrl: 'views/dashboard.html',
@@ -28,10 +28,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
   .state('user-profile',{
 	  templateUrl:'views/user/user_profile.html',
 	  url:'/user-profile',
-	  //controller:'TrailController',
-	  //resolve:{
-		  //loggedout:checkLoggedout
-	  //}
+	  controller:'ProfileController',
+	  resolve:{
+		  loggedout:checkLoggedout
+	  }
 	  
   })
   .state('client-details',{
@@ -63,7 +63,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
   .state('user-list',{
 	  templateUrl:'views/user/userlist.html',
 	  url:'/user-list',
-	  controller:'Main_Controller'
+	  controller:'User_Controller'
 	  
 	  //resolve:{
 		  //loggedout:checkLoggedout
@@ -84,13 +84,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
 		  //loggedout:checkLoggedout
 	  //}
   })
-  .state('user-details',{
-	  templateUrl:'views/user/user_details.html',
-	  url:'/user-details',
-	  //resolve:{
-		  //loggedout:checkLoggedout
-	  //}
-  })
+  
   .state('trail-balance',{
 	  templateUrl:'views/trail.html',
 	  url:'/trail-balance',
@@ -128,9 +122,9 @@ app.config(function($stateProvider, $urlRouterProvider) {
   
   function checkLoggedout($q, $timeout, $rootScope, $state, $localStorage) {
     var deferred = $q.defer();
-    accessToken = localStorage.getItem('accessToken')
+    //accessToken = localStorage.getItem('accessToken')
     $timeout(function(){
-      if(accessToken){
+      if($localStorage.user){
         deferred.resolve();
       }
       else{
@@ -141,9 +135,9 @@ app.config(function($stateProvider, $urlRouterProvider) {
   }
   function checkLoggedin($q, $timeout, $rootScope, $state, $localStorage) {
     var deferred = $q.defer();
-    accessToken = localStorage.getItem('accessToken')
+    // accessToken = localStorage.getItem('accessToken')
     $timeout(function(){
-      if(accessToken){
+      if($localStorage.user){
         deferred.resolve();
         $state.go('dashboard');
       }
