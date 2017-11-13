@@ -20,10 +20,6 @@ app.service('LoginService',function($q,$http){
 	        });
 	        return deffered.promise;
 		}
-
-
-
-
 	}
 })
 app.service('UserService',function($q,$http){
@@ -43,4 +39,14 @@ app.service('ClientService',function($q,$http){
 
 				}
 	}
+})
+app.service('RoleService',function($q,$http){
+	return{
+			role : function(){
+				var response = $http.get('local.json');
+				console.log(response);
+				return response
+			}
+
+			}
 })
